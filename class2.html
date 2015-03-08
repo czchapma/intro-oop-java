@@ -7,30 +7,27 @@
 	<title>GDI Introduction to Java and OOP Concepts</title>
 
 	<meta name="description" content="Intro to Object Oriented Programming with Java curriculum was developed by Ashley Price for Girl Develop It.   The course is meant to be taught in 2 4-hour sections.  The slides are customizable according to the needs of a given class or audience.">
-	<meta name="author" content="Girl Develop It">
+	<meta name="author" content="Ashley Price">
 
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-	<link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="reveal/css/reveal.css">
+  <link rel="stylesheet" href="reveal/css/theme/gdicool.css" id="theme">
 
-	<link rel="stylesheet" href="reveal/css/reveal.css">
-	<link rel="stylesheet" href="reveal/css/theme/serif.css" id="theme">
-	<link rel="stylesheet" href="css/gdi.css">
+  <!-- For syntax highlighting -->
+  <!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+  <!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
 
-	<!-- For syntax highlighting -->
-	<link rel="stylesheet" href="reveal/plugin/highlight/styles/zenburn.css">
+  <!-- If use the PDF print sheet so students can print slides-->
 
-	<!-- For the slides -->
-	<link rel="stylesheet" href="css/slides.css">
+  <link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
-	<!-- If use the PDF print sheet so students can print slides-->
-	<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
-
-	<!--[if lt IE 9]>
-	<script src="lib/js/html5shiv.js"></script>
-	<![endif]-->
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
 </head>
+
 
 <body>
 
@@ -242,7 +239,7 @@ public void accelerate() {
 					<br>
 					switchEngineState() {<br>
 					if(engineOn == true) {<br>
-					engineOn = false; 
+					engineOn = false;
 					} else { <br>
 					engineOn = true;
 					}<br>
@@ -374,7 +371,7 @@ Current Speed: 0
 				<h3><span class='individually'>Individually</span></h3>
 				<p>Create a method called printDescription that will print the following statement:</p>
 				<pre><code class='no-highlight'>
-I'm a MotorVehicle and my engine is on (true/false) and 
+I'm a MotorVehicle and my engine is on (true/false) and
 I'm currently going (#)mph.
 				</code></pre>
 				<p>Test it by calling myVehicle.printDescription();</p>
@@ -383,8 +380,8 @@ I'm currently going (#)mph.
 				<h3>The Code</h3>
 				<pre><code class='java'>
 public void printDescription	() {
-	System.out.println("I'm a MotorVehicle and my engine is on " + 
-		engineOn + " and I'm currently going " + 
+	System.out.println("I'm a MotorVehicle and my engine is on " +
+		engineOn + " and I'm currently going " +
 		currentSpeed + " mph.");
 }
 				</code></pre>
@@ -457,7 +454,7 @@ instanceOfObject.fieldName
 			<section>
 				<aside class='notes'>
 					Change from public to private:<br>
-					private boolean engineOn;  
+					private boolean engineOn;
 				</aside>
 				<h3>Encapsulating our Data</h3>
 				<p>Let's make all our data members private</p>
@@ -702,7 +699,7 @@ public class Car extends MotorVehicle {
 public class Car extends MotorVehicle {
 	private boolean trunkOpen;
 	private int numDoors;
-	
+
 	public Car() {
 		super();
 	}
@@ -1011,36 +1008,40 @@ MotorVehicle myVehicle2 = new Car();
 			<h3>Where to go from here?</h3>
 		</section>
 	</div> <!-- end slides -->
-	<footer>
-		<span class='footer-title'>Intro to OOP with Java</span>
-		<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
-	</footer>
-	</div> <!-- end reveal -->
-	<script src="reveal/lib/js/head.min.js"></script>
-	<script src="reveal/js/reveal.min.js"></script>
+        <footer>
+            <div class="copyright">
+                Intro to OOP &amp; Java ~ Girl Develop It ~
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+            </div>
+        </footer>
+    </div>
 
-	<script>
-		// Full list of configuration options available here:
-		// https://github.com/hakimel/reveal.js#configuration
-		Reveal.initialize({
-			controls: true,
-			progress: true,
-			history: true,
+    <script src="reveal/lib/js/head.min.js"></script>
+    <script src="reveal/js/reveal.min.js"></script>
 
-			theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-			transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/none
+    <script>
+        // Full list of configuration options available here:
+        // https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            history: true,
 
-			// Optional libraries used to extend on reveal.js
-			dependencies: [
-				{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-				{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-				{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-				{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-				{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-			]
-		});
+            theme: Reveal.getQueryHash().theme, // available theme are in /css/themes
+            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
 
-	</script>
+            // Optional libraries used to extend on reveal.js
+            dependencies: [
+                { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                { src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+            ]
+        });
+
+    </script>
 </body>
 </html>
+
