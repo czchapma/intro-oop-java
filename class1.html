@@ -192,23 +192,22 @@
       <section>
         <section>
           <h3>Variables</h3>
-          <p>What are variables?</p>
-          <p>Java is a statically typed language</p>
-          <p>You must declare all variables before you use them.  The declaration must include the variable type and the variable name.</p>
+          <p class="box--small">What are variables?</p>
+          <p class="box--small fragment">Java is a statically typed language</p>
+          <p class="box--small fragment">You must declare all variables before you use them.<br/> <small>The declaration must include the variable type and the variable name.</small></p>
         </section>
         <section>
-          <h3>Statically Typed Variables Illustrated</h3>
-          <p>You can think of variables as little boxes that hold a value</p>
-          <p>In strongly typed langauges, variables only hold the "kind of value" they were declared to: </p>
-          <img src="images/variables_illustrated.png">
+          <h4>Statically Typed Variables Illustrated</h4>
+          <p class="box copy--small">You can think of variables as little boxes that hold a value</p>
+          <p class="box--small copy--small fragment">In strongly typed langauges, variables only hold the "kind of value" they were declared to:<br/><br/><img src="images/variables_illustrated.png"></p>
         </section>
         <section>
           <aside class='notes'>
             There are 8 total, but these are three we care about at the moment
           </aside>
           <h3>Primitive Variables</h3>
-          <p>A primitive variable is the most basic type of value in a language.</p>
-          <p>Primitive types we'll be looking at include: </p>
+          <p class="box copy--small">A primitive variable is the most basic type of value in a language.</p>
+          <p class="box copy--small">Primitive types we'll be looking at include: </p>
           <ul>
             <li>int</li>
             <li>double</li>
@@ -228,32 +227,34 @@
             }
           </aside>
           <h3>Code It: Creating Variables</h3>
-          <p>Declare a variable with the following format: </p>
-          <pre><code class='java'>type name;</code></pre>
-          <p>We're going to create the following three variables: </p>
-          <ul>
-            <li>int numberPassengers</li>
-            <li>int maxNumberPassengers</li>
-            <li>boolean isFull</li>
-          </ul>
+          <p class="box copy--small">Declare a variable with the following format: </p>
+          <pre style="height: 30px; overflow: hidden"><code class='java'>type name;</code></pre>
+          <div  class="box copy--small"><p>We're going to create the following three variables: </p>
+                    <ul>
+                      <li><code>int numberPassengers</code></li>
+                      <li><code>int maxNumberPassengers</code></li>
+                      <li><code>boolean isFull</code></li>
+                    </ul></div>
         </section>
         <section>
           <h3>The Code</h3>
           <pre><code class='java'>
-  public static void main(String[] args) {
-    // TODO Auto-generated method stub
-    System.out.println("Hello World!");
-    int numberPassengers;
-    int maxNumberPassengers;
-    boolean isFull;
-  }
+            public static void main(String[] args) {
+              // TODO Auto-generated method stub
+              System.out.println("Hello World!");
+              int numberPassengers;
+              int maxNumberPassengers;
+              boolean isFull;
+            }
           </code></pre>
          </section>
       </section>
+
+      <!-- Part 1 : Assignment Operators -->
       <section>
         <section>
           <h3>Operators</h3>
-          <ul>
+          <ul class="list--tall box--small">
             <li>Assignment</li>
             <li>Arithmetic</li>
             <li>Equality and Relationship</li>
@@ -261,8 +262,7 @@
             <li>Precedence</li>
           </ul>
         </section>
-      </section>
-      <section>
+
         <section>
           <aside class='notes'>
             public static void main(String[] args) {<br>
@@ -276,9 +276,8 @@
             "Variable Name" "Operator" "Value"
           </aside>
           <h3>Assignment Operators</h3>
-          <p>To assign a value to a variable we use the assignment operator: </p>
-          <pre><code class='java'>=</code></pre>
-          <p>Let's try it out: </p>
+          <p class="box copy--small">To assign a value to a variable we use the assignment operator: <code>=</code></p>
+          <p class="box--small copy--small">Let's try it out: </p>
           <pre><code class='java'>numberPassgeners = 1;</code></pre>
         </section>
         <section>
@@ -293,12 +292,12 @@
             }
           </aside>
           <h3>Initialization</h3>
-          <p>We just <em>initialized</em> numberPassgeners</p>
-          <p>Initilization is the first (initial) assignment of a value to a variable</p>
-          <p>You should always initialize your variables before using them in your program</p>
+          <p class="box copy--small">We just <em>initialized</em> <code>numberPassgeners</code></p>
+          <p class="box--small copy--small">Initilization is the first (<em>initial</em>) assignment of a value to a variable</p>
+          <p class="box--small copy--xsmall">You should always initialize your variables before using them in your program</p>
         </section>
         <section>
-          <p>You can initialize your variables when you declare them: </p>
+          <p class="copy--small">You can initialize your variables when you declare them: </p>
           <pre><code class='java'>int maxNumberPassengers = 2</code></pre>
         </section>
         <section>
@@ -313,33 +312,35 @@
             }
           </aside>
           <h3>Code it!</h3>
-          <p>Boolean variables have two values:</p>
-          <ul>
+          <p class="box--small copy--small">Boolean variables have two values:</p>
+          <ul class="box--small copy--small list--tall">
             <li>true</li>
             <li>false</li>
           </ul>
-          <p><span class='individually'>On your own,</span> initialize the variable <em>isFull</em> with the value <em>false</em></p>
+          <p class="box--small copy--small"><span class='individually'>On your own,</span> initialize the variable <code>isFull</code> with the value <code>false</code></p>
         </section>
         <section>
           <h3>The Code: </h3>
           <pre><code class='java'>
-public static void main(String[] args) {
-  int numberPassengers;
-  int maxNumberPassgeners = 2;
-  boolean isFull = false;
-  numberPassgeners = 1;
-}
+          public static void main(String[] args) {
+            int numberPassengers;
+            int maxNumberPassgeners = 2;
+            boolean isFull = false;
+            numberPassgeners = 1;
+          }
           </code></pre>
         </section>
       </section>
+
+      <!-- Part 1 : Arithmetic Operators -->
       <section>
         <section>
           <aside class='notes'>
             Dropping % don't need that with beginners.
           </aside>
           <h3>Arithmetic Operators</h3>
-          <p>Just like in math class, we can have arithmetic operators in programming:</p>
-          <pre><code class='java'>+, -, *, /</code></pre>
+          <p class="box--small copy--small">Just like in math class, we can have arithmetic operators in programming:</p>
+          <p><code>+</code> <code>-</code> <code>*</code> <code>/</code></p>
           <p>Add, subtract, multiply and divide</p>
         </section>
         <section>
@@ -353,7 +354,8 @@ public static void main(String[] args) {
           </aside>
           <h3>Code It!</h3>
           <pre><code class='java'>
-maxNumberPassengers = maxNumberPassgeners + 3; //we added a backseat!
+          maxNumberPassengers = maxNumberPassgeners + 3;
+          // we added a backseat!
           </code></pre>
         </section>
         <section>
@@ -368,34 +370,33 @@ maxNumberPassengers = maxNumberPassgeners + 3; //we added a backseat!
               System.out.println("Number of Passengers: " + numberPassengers);</strong><br>
           </aside>
           <h3>Code it!</h3>
-          <p class='individually'>On your own: </p>
-          <ul>
-            <li>Increment the numberPassengers value by one</li>
-            <li>Then use the System.out.println method to show the result:
-              <pre><code class='java'>
-System.out.println("Number of Passengers: " + numberPassengers);
-              </code></pre>
+          <p class='box--small copy--small individually'>On your own: </p>
+          <ul class="list--tall copy--small">
+            <li>Increment the <code>numberPassengers</code> value by one</li>
+            <li>Then use the <code>System.out.println</code> method to show the result:
             </li>
           </ul>
+          <pre><code class='java'>
+          System.out.println("Number of Passengers: " + numberPassengers);
+          </code></pre>
         </section>
         <section>
           <h3>The Code</h3>
-          <pre><code class='java'>
-numberPassengers = numberPassengers + 1;
-System.out.println("Number of Passengers: " + numberPassengers);
-</code></pre>
-          <p>You can write this in shorthand using the ++ operator: </p>
-          <pre><code class='java'>
-numberPassengers++;
+          <pre style="height: 100px; overflow: hidden;"><code class='java'>
+          numberPassengers = numberPassengers + 1;
+          System.out.println("Number of Passengers: " + numberPassengers);
           </code></pre>
-          <p>Output: </p>
-          <pre><code class='no-highlight'>
-Hello World
-Number of Passengers: 2
+          <p class="copy--small box--small">You can write this in shorthand using the <code>++</code> operator: </p>
+          <pre style="height: 100px; overflow: hidden;"><code class='java'>
+          numberPassengers++;
+          </code></pre>
+          <p class="copy--small box--small">Output: </p>
+          <pre style="height: 100px; overflow: hidden;"><code class='no-highlight'>
+          Hello World
+          Number of Passengers: 2
           </code></pre>
         </section>
-      </section>
-      <section>
+
         <section>
           <aside class='notes'>
             int currentSpeed = 0;<br>
@@ -406,12 +407,12 @@ Number of Passengers: 2
             currentSpeed = currentSpeed *3;<br>
             System.out.println("Current Speed: "+currentSpeed);<br>
           </aside>
-          <h3>Code It: Playing with Arithmetic Operators</h3>
-          <p><span class='individually'>On your own:</span></p>
-          <ol>
-            <li>Create an integer called 'currentSpeed'</li>
-            <li>Initialize it with the value 0</li>
-            <li>Increase the value by 20 mph</li>
+          <h4>Code It: <span class="blue">Playing with Arithmetic Operators</span></h4>
+          <p class="box--small copy--small"><span class='individually'>On your own:</span></p>
+          <ol class="copy--xsmall">
+            <li>Create an integer called <code>currentSpeed</code></li>
+            <li>Initialize it with the value <code>0</code></li>
+            <li>Increase the value by 20mph</li>
             <li>Print the new current speed</li>
             <li>Now reduce your speed in half</li>
             <li>Print the new current speed</li>
@@ -422,60 +423,62 @@ Number of Passengers: 2
         <section>
           <h3>Expected Output: </h3>
           <pre><code class='no-highlight'>
-Hello World
-Number of Passengers: 2
-Current Speed: 20
-Current Speed: 10
-Current Speed: 30
+          Hello World
+          Number of Passengers: 2
+          Current Speed: 20
+          Current Speed: 10
+          Current Speed: 30
           </code></pre>
         </section>
         <section>
           <h3>The Code</h3>
           <pre><code class='java'>
-int currentSpeed = 0;
-currentSpeed = currentSpeed + 20;
-System.out.println("Current Speed: "+currentSpeed);
-currentSpeed = currentSpeed / 2;
-System.out.println("Current Speed: "+currentSpeed);
-currentSpeed = currentSpeed * 3;
-System.out.println("Current Speed: "+currentSpeed);
+          int currentSpeed = 0;
+          currentSpeed = currentSpeed + 20;
+          System.out.println("Current Speed: "+currentSpeed);
+          currentSpeed = currentSpeed / 2;
+          System.out.println("Current Speed: "+currentSpeed);
+          currentSpeed = currentSpeed * 3;
+          System.out.println("Current Speed: "+currentSpeed);
           </code></pre>
         </section>
       </section>
+
+      <!-- Part 1 : Equality & Relationship Operators -->
       <section>
         <section>
-          <h3>Equality and Relationship Operators</h3>
-          <p>These operatorse evaluate to true or false</p>
-          <table>
+          <h4>Equality and Relationship Operators</h4>
+          <p class="copy--small box--small">These operators evaluate to <code>true</code> or <code>false</code></p>
+          <table class="copy--small" style="width: 400px; margin: 0 auto;">
             <tr>
-              <td>==</td><td>Equal</td>
+              <td><code>==</code></td><td>Equal</td>
             </tr>
             <tr>
-              <td>!=</td><td>Not Equal</td>
+              <td><code>!=</code></td><td>Not Equal</td>
             </tr>
             <tr>
-              <td>&lt;</td><td>Less than</td>
+              <td><code>&lt;</code></td><td>Less than</td>
             </tr>
             <tr>
-              <td>></td><td>Greater than</td>
+              <td><code>></code></td><td>Greater than</td>
             </tr>
             <tr>
-              <td>&lt;=</td><td>Less than or Equal to</td>
+              <td><code>&lt;=</code></td><td>Less than or Equal to</td>
             </tr>
             <tr>
-              <td>>=</td><td>Greater than or Equal to</td>
+              <td><code>>=</code></td><td>Greater than or Equal to</td>
             </tr>
           </table>
         </section>
         <section>
           <h3>Code it!</h3>
           <pre><code class='java'>
-isFull = (numberPassengers == maxNumberPassengers);
-System.out.println("The car is Full: " + isFull);
+          isFull = (numberPassengers == maxNumberPassengers);
+          System.out.println("The car is Full: " + isFull);
           </code></pre>
           <p>Output:</p>
           <pre><code class='no-highlight'>
-The car is full: false
+          The car is full: false
           </code></pre>
         </section>
         <section>
@@ -490,10 +493,10 @@ The car is full: false
             I'm full and/or overbooked! false<br>
           </aside>
           <h3>Code It - <span class='individually'>Individually</span></h3>
-          <ol>
-            <li>In a boolean "hasSpace," assign the resulting value of the question "numberPassengers is less than maxNumberPassengers?"</li>
+          <ol class="list--tall copy--small box--small">
+            <li>In a boolean <code>hasSpace</code>, assign the resulting value of the question "<code>numberPassengers</code> is less than <code>maxNumberPassengers</code>?"</li>
             <li>Print the result</li>
-            <li>Test if the numberPassengers is greater than or equal to maxNumberPassengers and store it in isFull</li>
+            <li>Test if the <code>numberPassengers</code> is greater than or equal to <code>maxNumberPassengers</code> and store it in <code>isFull</code></li>
             <li>Print the result</li>
           </ol>
         </section>
@@ -508,44 +511,48 @@ System.out.println("I'm full and/or overbooked! " + noMore);
           </code></pre>
           <p>Output:</p>
           <pre><code class='no-highlight'>
-We have less thatn the number of Max Passengers: true
-I'm full and/or overbooked! false
-      </code></pre>
-    </section>
-  </section>
-  <section>
-    <section>
-      <aside class='notes'>
-        So evaluate x>0 <br>
-        now evaluate y> 0<br>
-        now evaluate if both of those things were true
-      </aside>
-      <h3>Conditional Operators</h3>
-      <table>
-        <tr>
-          <td>&amp;&amp;</td><td>And</td>
-        </tr>
-        <tr>
-          <td>||</td><td>Or</td>
-        </tr>
-      </table>
-      <p>We can check if two (x and y) values are true</p>
-      <pre><code class='java'>
-positiveNumbers = x > 0 &amp;&amp; y > 0;
-      </code></pre>
-    </section>
-    <section>
-      <aside class='notes'>
-        I'm only endangering myself false<br>
-        Mention Short Circuiting? If class is doing well with concepts.
-      </aside>
-      <h3>Code It!</h3>
-      <pre><code class='java'>
-boolean dangerToSelfOnly = numberPassengers == 1 &amp;&amp; currentSpeed > 55;
-System.out.println("I'm only endangering myself " + dangerToSelfOnly);
-      </code></pre>
-    </section>
-  </section>
+          We have less thatn the number of Max Passengers: true
+          I'm full and/or overbooked! false
+          </code></pre>
+        </section>
+      </section>
+
+      <!-- Part 1 : Conditional Operators -->
+      <section>
+        <section>
+          <aside class='notes'>
+            So evaluate x>0 <br>
+            now evaluate y> 0<br>
+            now evaluate if both of those things were true
+          </aside>
+          <h3>Conditional Operators</h3>
+          <table style="width: 100px; margin: 1em auto">
+            <tr>
+              <td><code>&amp;&amp;</code></td><td>And</td>
+            </tr>
+            <tr>
+              <td><code>||</code></td><td>Or</td>
+            </tr>
+          </table>
+          <p class="copy--small box--small">We can check if two (x and y) values are true</p>
+          <pre><code class='java'>
+          positiveNumbers = x > 0 &amp;&amp; y > 0;
+          </code></pre>
+        </section>
+        <section>
+          <aside class='notes'>
+            I'm only endangering myself false<br>
+            Mention Short Circuiting? If class is doing well with concepts.
+          </aside>
+          <h3>Code It!</h3>
+          <pre><code class='java'>
+    boolean dangerToSelfOnly = numberPassengers == 1 &amp;&amp; currentSpeed > 55;
+    System.out.println("I'm only endangering myself " + dangerToSelfOnly);
+          </code></pre>
+        </section>
+      </section>
+
+
   <section>
     <section>
       <h3>Precedence</h3>
