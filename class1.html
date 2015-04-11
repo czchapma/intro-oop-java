@@ -77,24 +77,25 @@
         </section>
         <section>
             <h3>Creating a new Java Project</h3>
-            <ol class="list--tall box--small">
+            <ol>
               <li>
-                In Eclipse, navigate to File > New > Java Project
+                In IntelliJ, click "New Project" in the project pane, or File > New Project from the toolbar
               </li>
               <li>
-                Project Name: com.gdi.oop
+                Select Java from the list on the left, and Java 1.8 as your project SDK
               </li>
+              <li>Enter First sip of Java (or whatever you want) as your project name</li>
               <li>
-                We'll be keeping the defaults.  So, hit finish!
+                Hit finish
               </li>
             </ol>
         </section>
         <section>
           <h3> Adding our First Class</h3>
           <ol class="list--tall box--small">
-            <li>File > New > Class</li>
-            <li>Name: HelloWorld <em>(make sure there are no spaces)</em></li>
-            <li>Under <em>which methods would you like to create?</em>, check "public static void main(String[] args)"</li>
+            <li>File > New</li>
+            <li>From the drop down menu, click Java Class</li>
+            <li>Enter 'HelloWorld' as your class name (no spaces!)</li>
             <li>Click finish</li>
           </ol>
         </section>
@@ -106,7 +107,7 @@
              * @param args
             */
             public static void main(String[] args) {
-              //TODO Auto-generated method stub
+              // Write your first java program here!
             }
           }
           </code></pre>
@@ -120,11 +121,15 @@
             }
           </aside>
           <h3>Writing our first line </h3>
-          <ol class="list--xtall box--small">
-            <li>Inside the <code>main</code> method type:
-              <pre style="height: 30px; overflow: hidden;"><code class='java'>System.out.println("Hello, World!");</code></pre></li>
-            <li>Hit the play button in your toolbar</li>
-          </ol>
+            <ol>
+              <li>Inside the main method type:</li>
+              <pre><code class='java'>System.out.println("Hello, Ann Arbor!");</code></pre></li>
+              <li>In the upper right hand corner, there's play button, but it's greyed out. IntelliJ needs to know what code to run</li>
+              <li>Click the drop down arrow to the left > Edit Configurations</li>
+              <li>Hit the '+' icon on the right > Select Java Application</li>
+              <li>In the 'Main Class' Field, tap the '...' browse icon and choose your class</li>
+              <li>Now hit play!</li>
+            </ol>
         </section>
         <section>
           <h3>The Code </h3>
@@ -134,8 +139,8 @@
              * @param args
             */
             public static void main(String[] args) {
-              //TODO Auto-generated method stub
-              System.out.println("Hello, World!");
+              // Write your first java program here!
+              System.out.println("Hello Ann Arbor!");
             }
           }
           </code></pre>
@@ -154,8 +159,9 @@
         <section>
           <h3>Comments</h3>
           <p class="box--small"><span class="blue">Comments let you write notes in the code.</span></p>
-          <p>They can be formatted in two ways: </p>
-          <ol class="list--tall box--small copy--small">
+          <p class="box--small copy--xsmall">They're really useful when you're collaborating with other developers<br/>or when you go back and look at your own work.</p>
+          <p class="copy--small">They can be formatted in two ways: </p>
+          <ol class="list--tall box--small copy--xsmall">
             <li>A single line that starts with <code>//</code></li>
             <li>One or more lines between <code>/*</code> and <code>*/</code></li>
           </ol>
@@ -167,8 +173,8 @@
              * @param args
             */
             public static void main(String[] args) {
-              //TODO Auto-generated method stub
-              System.out.println("Hello, World!");
+              // Write your first java program here!
+              //System.out.println("Hello Ann Arbor!");
             }
           }
           </code></pre>
@@ -180,7 +186,7 @@
       <section>
         <h3>Part 1: <span class="blue">Language Fundamentals</span></h3>
         <ul class="list--tall box--small">
-          <li>Primitive Data Types (Variables)</li>
+          <li>Variables</li>
           <li>Operators</li>
           <li>Expressions &amp; Statements</li>
           <li>Flow Control (Blocks)</li>
@@ -195,6 +201,7 @@
           <p class="box--small">What are variables?</p>
           <p class="box--small fragment">Java is a <span class="blue">statically typed</span> language</p>
           <p class="box--small fragment">You must <span class="green">declare all variables before you use them</span>.<br/> <small>The declaration must include the variable type and the variable name.</small></p>
+          <p class="box--small fragment">You can't change the type of a variable<br/>after you declare it</p>
         </section>
         <section>
           <h4>Statically Typed Variables Illustrated</h4>
@@ -217,7 +224,6 @@
         <section>
           <aside class='notes'>
             public static void main(String[] args) {<br>
-              // TODO Auto-generated method stub<br>
               System.out.println("Hello World");<br>
               <strong>
                 int numberPassengers;<br>
@@ -240,7 +246,6 @@
           <h3>The Code</h3>
           <pre><code class='java'>
             public static void main(String[] args) {
-              // TODO Auto-generated method stub
               System.out.println("Hello World!");
               int numberPassengers;
               int maxNumberPassengers;
@@ -266,7 +271,6 @@
         <section>
           <aside class='notes'>
             public static void main(String[] args) {<br>
-              // TODO Auto-generated method stub<br>
               System.out.println("Hello World");<br>
               int numberPassengers;<br>
               int maxNumberPassengers;<br>
@@ -283,7 +287,6 @@
         <section>
           <aside class='notes'>
             public static void main(String[] args) {<br>
-              // TODO Auto-generated method stub<br>
               System.out.println("Hello, World!");<br>
               int numberPassengers;<br>
               <strong>int maxNumberPassengers=2;</strong><br>
@@ -303,7 +306,6 @@
         <section>
           <aside class='notes'>
             public static void main(String[] args) {<br>
-              // TODO Auto-generated method stub<br>
               System.out.println("Hello World");<br>
               int numberPassengers;<br>
               int maxNumberPassengers=2;<br>
