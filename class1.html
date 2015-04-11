@@ -48,7 +48,7 @@
           <br>
           <h3>About Me</h3>
           <div class="box">
-            <p>Mobile software engineer, coffee addict, friend to dogs</p>
+            <p>Mobile software engineer, coffee addict, dog person</p>
             <aside class="notes"></aside>
           </div>
         </section>
@@ -87,21 +87,9 @@
 						</ol>
 				</section>
 				<section>
-					<h3> Adding our First Class</h3>
-					<ol>
-						<li>File > New</li>
-						<li>From the drop down menu, click Java Class</li>
-						<li>Enter 'HelloWorld' as your class name (no spaces!)</li>
-						<li>Click finish</li>
-					</ol>
-				</section>
-				<section>
 					<h3>Default Code</h3>
 					<pre><code class='java'>
-public class HelloWorld {
-	/**
-	 * @param args
-	*/
+public class Main {
 	public static void main(String[] args) {
 		// Write your first java program here!
 	}
@@ -122,23 +110,17 @@ public class HelloWorld {
 						<ol>
 							<li>Inside the main method type:</li> 
 							<pre><code class='java'>System.out.println("Hello, Ann Arbor!");</code></pre></li>
-							<li>In the upper right hand corner, there's play button, but it's greyed out. IntelliJ needs to know what code to run</li>
-							<li>Click the drop down arrow to the left > Edit Configurations</li>
-							<li>Hit the '+' icon on the right > Select Java Application</li>
-							<li>In the 'Main Class' Field, tap the '...' browse icon and choose your class</li>
-							<li>Now hit play!</li>
+							<li>Tap the play button in the upper right hand corner</li>
+							<li>Woo!</li>
 						</ol>
 				</section>
 				<section>
 					<h3>The Code </h3>
 					<pre><code class='java'>
-public class HelloWorld {
-	/**
-	 * @param args
-	*/
+public class Main {
 	public static void main(String[] args) {
-		// Write your first java program here!
-		System.out.println("Hello Ann Arbor!");
+	   	// Write your first java program here!
+	   	System.out.println("Hello Ann Arbor!");
 	}
 }
 					</code></pre>
@@ -162,9 +144,6 @@ public class HelloWorld {
 				<section>
 					<pre><code class='java'>
 public class HelloWorld {
-	/**
-	 * @param args
-	*/
 	public static void main(String[] args) {
 		// Write your first java program here!
 		//System.out.println("Hello Ann Arbor!");
@@ -435,7 +414,7 @@ System.out.println("Current Speed: "+currentSpeed);
       <section>
         <section>
           <h3>Equality and Relationship Operators</h3>
-          <p>These operatorse evaluate to true or false</p>
+          <p>These operators evaluate to true or false</p>
           <table>
             <tr>
               <td>==</td><td>Equal</td>
@@ -860,7 +839,7 @@ while (condition) {
             I'm Carrying: 5
           </aside>
           <h3>Code It!</h3>
-          <p>While hasSpace is true, add a passengers then update the value of hasSpace</p>
+          <p>While hasSpace is true, add a passenger then update the value of hasSpace</p>
         </section>
         <section>
           <h3>The Code</h3>
@@ -939,7 +918,6 @@ garage[2] = "Pontiac";
 				<li>How big it is or how many values it can hold (also called its length)</li>
 				<li>The values it currently holds</li>
 			</ul>
-			<p>**Describe our Array in these terms</p>
 		</section>
 		<section>
 			<aside class='notes'>
@@ -1060,7 +1038,7 @@ Double mpg = new Double("49.1");
       <section>
         <h3>Double -> String &amp; String -> Double</h3>
         <p>Doubles can be converted to a String with the <a href="http://docs.oracle.com/javase/1.4.2/docs/api/java/lang/Double.html#toString()" target="_blank">toString()</a> method.</p>
-        <p>Meanwhile, we can get a primitive double value by calling on <a href="http://docs.oracle.com/javase/1.4.2/docs/api/java/lang/Double.html#parseDouble(java.lang.String)" target="_blank">Double.parseDouble(double x);</a></p>
+        <p>Meanwhile, we can get a primitive double value by calling on <a href="http://docs.oracle.com/javase/1.4.2/docs/api/java/lang/Double.html#parseDouble(java.lang.String)" target="_blank">doubleValue();</a></p>
       </section>
       <section>
         <h3>Null</h3>
