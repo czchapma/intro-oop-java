@@ -430,10 +430,9 @@
         <section>
           <h3>Code It!</h3>
           <p class="copy--small box--small">Mark your data members public and private</p>
-          <p class="copy--small box--small">When your data members are private, Java convention says to prefix the field name with an <code>m</code></p>
           <pre><code class='java'>
-          public boolean mEngineOn;
-          private int mCurrentSpeed;
+          public boolean engineOn;
+          private int currentSpeed;
           </code></pre>
         </section>
         <section>
@@ -478,7 +477,7 @@
         <section>
           <aside class='notes'>
             Change from public to private:<br>
-            private boolean mEngineOn;
+            private boolean engineOn;
           </aside>
           <h3>Encapsulating our Data</h3>
           <p class="copy--small box--small">Let's make all our data members private</p>
@@ -494,15 +493,15 @@
           <p class="copy--small box--small">Add an accessor method to get the current speed: </p>
           <pre><code class='java'>
           public int getCurrentSpeed() {
-            return mCurrentSpeed;
+            return currentSpeed;
           }
           </code></pre>
-          <p class="copy--small box--small"><span class='individually'>On your own,</span> add an accessor method for the boolean <code>mEngineOn</code></p>
+          <p class="copy--small box--small"><span class='individually'>On your own,</span> add an accessor method for the boolean <code>engineOn</code></p>
         </section>
         <section>
           <pre><code class='java'>
           public boolean getEngineOn() {
-            return mEngineOn;
+            return engineOn;
           }
           </code></pre>
         </section>
@@ -538,8 +537,7 @@
           <p class="copy--small box--small">How many cars on the road?</p>
           <p class="copy--small box--small">Create a static data member to keep count of<br/>the MotorVehicles we've created: </p>
           <pre style="height: 130px; overflow: hidden;"><code class='java'>
-          private static int sCountCreated = 0;
-          // Prefix your static members with an 's'
+          private static int countCreated = 0;
           </code></pre>
           <p class="copy--small box--small">Each time a MotorVehicle is created we want to increment the count.</p>
           <p class="copy--small box--small">Where would we put the code to do so?</p>
@@ -548,9 +546,9 @@
           <h3>Code It</h3>
           <pre><code class='java'>
           public MotorVehicle() {
-            mCurrentSpeed = 0;
-            mEngineOn = false;
-            sCountCreated++;
+            currentSpeed = 0;
+            engineOn = false;
+            countCreated++;
           }
           </code></pre>
         </section>
@@ -560,7 +558,7 @@
           <p class="copy--small box--small">Since this method belongs to the <em>class</em> and not an instance of the class, we call the method on the MotorVehicle class</p>
           <pre><code class='java'>
           public static int getCountCreated() {
-            return sCountCreated;
+            return countCreated;
           }
           </code></pre>
           <p class="copy--small box--small"><span class='individually'>On your own,</span> print the countCreated</p>
@@ -700,8 +698,8 @@
           <h3>The Code</h3>
           <pre><code class='java'>
           public class Car extends MotorVehicle {
-            private boolean mTrunkOpen;
-            private int mNumDoors;
+            private boolean trunkOpen;
+            private int numDoors;
 
             public Car() {
               super();
@@ -719,19 +717,19 @@
           </aside>
           <h3>Augment the constructor</h3>
           <p class="copy--small box">Our constructor should also initialize the subclass-only data members</p>
-          <p class="copy--small box">Initialize <code>mTrunkOpen</code> to false and <code>mNumDoors</code> to 4</p>
+          <p class="copy--small box">Initialize <code>trunkOpen</code> to false and <code>numDoors</code> to 4</p>
         </section>
         <section>
           <h3>The Code</h3>
           <pre><code class='java'>
           public class Car extends MotorVehicle {
-            private boolean mTrunkOpen;
-            private int mNumDoors;
+            private boolean trunkOpen;
+            private int numDoors;
 
             public Car() {
                 super();
-                       mTrunkOpen = false;
-                       mNumDoors = 4;
+                       trunkOpen = false;
+                       numDoors = 4;
             }
           }
           </code></pre>
@@ -796,11 +794,11 @@
           <h3>Code</h3>
           <pre><code class='java'>
           public boolean getTrunkOpen() {
-            return mTrunkOpen;
+            return trunkOpen;
           }
 
           public int getNumDoors() {
-            return mNumDoors;
+            return numDoors;
           }
           </code></pre>
           <pre><code class='java'>
@@ -874,14 +872,14 @@
           <p class="copy--small box--small">Doing so is called <em>Method Overloading</em></p>
           <pre><code class='java'>
           public void accelerate(int amount) {
-            mCurrentSpeed = mCurrentSpeed + amount;
+            currentSpeed = currentSpeed + amount;
           }
           </code></pre>
           <p class="copy--small box--small">Overloading is summed up by:<br/>Same name and different parameter list</p>
         </section>
         <section>
           <h3>An Error?</h3>
-          <p class="copy--small box"><em>The field MotorVehicle.mCurrentSpeed is not visible</em></p>
+          <p class="copy--small box"><em>The field MotorVehicle.currentSpeed is not visible</em></p>
           <p class="copy--small box">We've seen something like this before...<br/>it has to do with those access modifiers</p>
         </section>
       </section>
@@ -914,7 +912,7 @@
           <h3>The Code</h3>
           <pre><code class='java'>
           public void decelerate(int amount) {
-            mCurrentSpeed = mCurrentSpeed - amount;
+            currentSpeed = currentSpeed - amount;
           }
           </code></pre>
         </section>
