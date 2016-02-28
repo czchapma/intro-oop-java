@@ -1,9 +1,11 @@
-/* Girl Develop It Ann Arbor */
+/* Getting Sassy With CSS - Workshop Settings*/
 
 @import "gdilight";
 
 .reveal {
   // word-wrap: break-word;
+
+  .hide { display: none; }
 
   .center-align{ text-align: center}
 
@@ -122,15 +124,4 @@ pre {
     max-height: 475px;
     padding: 5px 10px;
   }
-}
-
-/*********************************************
- * EVENT
- *********************************************/
-
-.event__title {
-  @extend .blue;
-  text-transform: uppercase !important;
-
-  small { @extend .grey--light; }
 }
