@@ -29,1002 +29,7 @@
   <div class="reveal">
     <div class="slides">
 
-      <!-- EVENT INTRO -->
-      <section>
-        <section>
-          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
-          <div class="box--small">
-            <h3 class="event__title"><span class="green">Intro to Java</span><br /><small><span class="blue">& Object Oriented Programming</span></small></h3>
-            <p><small>@gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToJava</small></p>
-            <aside class="notes">
-            </aside>
-          </div>
-        </section>
-        <section>
-          <h3>Review: <span class="blue">Variables</span></h3>
-            <ul class="list--tall copy--small box--small">
-              <li>Statically typed</li>
-              <li>Strongly typed</li>
-              <li>Primitives</li>
-              <li>Objects</li>
-            </ul>
-        </section>
-        <section>
-          <h3>Review: <span class="blue">Flow Control</span></h3>
-          <ul class="list--tall copy--small box--small">
-            <li>Choices
-              <ul class="copy--small">
-                <li>If/Else</li>
-                <li>Switch</li>
-              </ul>
-            </li>
-            <li>Loops
-              <ul class="copy--small">
-                <li>For Loops</li>
-                <li>While Loops</li>
-              </ul>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h3>Review: <span class="blue">Objects</span></h3>
-          <ul class="list--tall box--small copy--small">
-            <li><strong>States</strong> - Also called properties and data members</li>
-            <li><strong>Behaviors</strong> - actions the object can take.  Known as methods</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Agenda</h3>
-          <ul class="list--tall box--small copy--small">
-            <li>Objects and Classes</li>
-            <li>Defining Fields and Methods</li>
-            <li>Data Encapsulation</li>
-            <li>Subclasses and Inheritance</li>
-            <li>Polymorphism</li>
-            <li>Abstraction</li>
-            <li>Interfaces</li>
-          </ul>
-        </section>
-      </section>
-
-      <!-- Featured Object -->
-      <section>
-        <section>
-          <h3>Featured Object</h3>
-          <p class="copy--small box">MotorVehicles which are types of Vehicles and include cars and buses</p>
-        </section>
-        <section>
-          <aside class='notes'>
-            Create an "Interface" based on this discussion<br>
-            Have an engine whose state can be on or off<br>
-            you can turn an engine on<br>
-            you can turn an engine off<br>
-            ------<br>
-            Have a current speed<br>
-            accelerate<br>
-            decelerate<br>
-            check your current speed -- accessor method<br>
-            ------<br>
-            Potential additional members: <br>
-            color<br>
-            maximum number of passengers -- accessor method<br>
-            current number of passengers -- accessor method<br>
-          </aside>
-          <p>Describe a Motor Vehicle's states and behaviors</p>
-        </section>
-      </section>
-
-      <!-- Classes -->
-      <section>
-        <section>
-          <aside class='notes'>
-            Think of how with a single recipe you can create cookies MANY times...<br>
-            Note to self: Bring cookies to class
-          </aside>
-          <h3>Classes</h3>
-          <p class="copy--small box--small">A <span class="blue">Class</span> is a <span class="green">blueprint of an Object</span></p>
-          <p class="copy--small fragment box--small">It tells us how to build an <em>instance</em> of an Object.</p>
-          <p class="copy--small fragment box--small">From one blueprint, we can create many instances of a single Object</p>
-        </section>
-        <section>
-          <h3>Class Declarations</h3>
-          <p>When defining a class you must include: </p>
-          <pre><code class='java'>
-          class ClassName {
-            ...
-          }
-          </code></pre>
-        </section>
-        <section>
-          <h3>Create a new project</h3>
-          <ol class="list--tall box">
-            <li>File > New > Project</li>
-            <li>Project name: com.gdi.vehicles</li>
-          </ol>
-        </section>
-        <section>
-          <h4>Create a new class with a main method</h4>
-          <ol class="list--tall box copy--small">
-            <li>File > New > Class</li>
-            <li>Class Name: Tester</li>
-            <li>Don't forget to add to add our main function:<br/> <code>public static void main(String[] args)</code></li>
-        </section>
-        <section>
-          <h3>Create a new class</h3>
-          <ol class="list--tall box">
-            <li>File > New > Class</li>
-            <li>Class Name: MotorVehicle</li>
-          </ol>
-        </section>
-        <section>
-          <h3>The Code</h3>
-          <pre><code class='java'>
-          public class MotorVehicle {
-          }
-          </code></pre>
-        </section>
-      </section>
-
-      <!-- Data Members -->
-      <section>
-        <section>
-          <aside class='notes'>
-            Flip back to our notes and list the data members
-          </aside>
-          <h3>Data Members</h3>
-          <p class="box copy--small">An Object has one or more <span class="blue">data members</span> that <span class="green">describe its state</span>.</p>
-        </section>
-        <section>
-          <aside class='notes'>
-            public class MotorVehicle {<br>
-            boolean engineOn;<br>
-            int currentSpeed;<br>
-            int maxNumberPassengers;<br>
-            int numCurrentPassengers;<br>
-            }<br>
-          </aside>
-          <h3>Defining Data Members</h3>
-          <pre><code class='java'>
-          public class MotorVehicle {
-            boolean engineOn;
-            int currentSpeed;
-          }
-          </code></pre>
-        </section>
-      </section>
-
-      <!-- Constructors -->
-      <section>
-        <section>
-          <h3>Defining a Constructor</h3>
-          <p class="copy--small box fragment">A constructor is a special method that is invoked<br/>when you create a new instance of your object.</p>
-          <p class="copy--xsmall box fragment">It's common to set default values for your data members in the constructor</p>
-          <p class="copy--xsmall box fragment">When you create an Object, you should include at least one constructor.  <br/>If you do not, the compiler automatically provides a default one.</p>
-        </section>
-        <section>
-          <h3>Code It!</h3>
-          <pre><code class='java'>
-          public MotorVehicle() {
-            currentSpeed = 0;
-            engineOn = false;
-          }
-          </code></pre>
-        </section>
-      </section>
-
-      <!-- Methods -->
-      <section>
-        <section>
-          <h3>Defining Methods</h3>
-          <p class="copy--small box"><span class="blue">Methods</span> represent the <span class="green">behavior of the Objects</span>.</p>
-          <p class="copy--xsmall fragment box">A method signature includes the method's name plus the number and type of parameters</p>
-        </section>
-        <section>
-          <aside class='notes'>
-            addPassenger?<br>
-            removePassenger?
-          </aside>
-          <h3>MotorVehicle Methods</h3>
-          <pre><code class='java'>
-          public void accelerate();
-          public void decelerate();
-          </code></pre>
-        </section>
-        <section>
-          <h3>Code It!  (Adding Methods)</h3>
-          <p class="copy--small box--small">Let's add an accelerate method to our MotorVehicle class: </p>
-          <pre><code class='java'>
-          public void accelerate() {
-            currentspeed = currentspeed + 5;
-          }
-          </code></pre>
-        </section>
-        <section>
-          <aside class='notes'>
-            void decelerate(){<br>
-            currentSpeed = currentSpeed - 5;<br>
-            }<br>
-            <br>
-            switchEngineState() {<br>
-            if(engineOn == true) {<br>
-            engineOn = false;
-            } else { <br>
-            engineOn = true;
-            }<br>
-            <br>
-            void addPassenger(){<br>
-            currentNumPassengers++;<br>
-            }<br>
-            <br>
-            void removePassenger{<br>
-            currentNumPassengers--;<br>
-            }
-          </aside>
-          <h3><span class='individually'>Individually</span></h3>
-          <p class="copy--small box--small">Add a decelerate method that slows the motor vehicle down in increments of 5.</p>
-          <p class="copy--small box--small">Add a method that will swtich the engine's state</p>
-          <p class="copy--small box--small"><em>If</em> the engine is on turn the engine off</p>
-          <p class="copy--small box--small"><em>else</em> the engine is off so turn the engine on</p>
-        </section>
-        <section>
-          <h3>The Code</h3>
-          <pre><code class='java'>
-          public void decelerate() {
-             currentSpeed = currentSpeed - 5;
-          }
-
-          public void switchEngineState() {
-            if (engineOn == true) {
-                 engineOn = false;
-            }
-            else {
-                 engineOn = true;
-            }
-          }
-          </code></pre>
-        </section>
-      </section>
-
-      <!-- Objects -->
-      <section>
-        <section>
-          <h3>Objects</h3>
-          <p class="box">You build an Object from a class</p>
-          <p class="box">Objects are instances of your classes</p>
-        </section>
-        <section>
-          <h3>Objects - Creating </h3>
-          <p class="copy--small box--small">To create an object:</p>
-          <pre style="height: 80px; overflow: hidden"><code class='java'>
-          MyObject obj = new MyObject();
-          </code></pre>
-          <p class="copy--small box--small">where <code>new MotorVehicle()</code> is the constructor we just wrote.
-          <p class="copy--small box--small">If the constructor expects parameters<br/>you would include them in this statement: </p>
-          <pre style="height: 120px; overflow: hidden"><code class='java'>
-          ComplexClass myComplexClass =
-            new ComplexClass("This constructor takes a string");
-          </code></pre>
-        </section>
-        <section>
-          <h3>Code It!</h3>
-          <p class="copy--small box--small">Create a MotorVehicle Object</p>
-          <p class="copy--small box--small">In the main method of the Tester class, add the following line: </p>
-          <pre><code class='java'>
-          MotorVehicle myVehicle = new MotorVehicle();
-          </code></pre>
-        </section>
-        <section>
-          <h3>Using Objects</h3>
-          <p class="copy--small box--small">Once you have created your object, you can call its different methods with the following format: </p>
-          <pre style="height: 80px; overflow: hidden"><code class='java'>
-          nameOfInstance.methodName();
-          </code></pre>
-          <p class="copy--small box--small">Similarly, you can access data members in this format: </p>
-          <pre style="height: 80px; overflow: hidden"><code class='java'>
-          nameOfInstance.datamember;
-          </code></pre>
-        </section>
-        <section>
-          <aside class='notes'>
-            MotorVehicle myVehicle = new MotorVehicle();<br>
-            myVehicle.switchEngineState();<br>
-            System.out.println("Engine is On: "+myVehicle.engineOn);<br>
-            System.out.println("Current Speed: "+myVehicle.currentSpeed);<br>
-            myVehicle.accelerate();<br>
-            System.out.println("Current Speed: "+myVehicle.currentSpeed);<br>
-            myVehicle.decelerate();<br>
-            System.out.println("Current Speed: "+myVehicle.currentSpeed);<br>
-            <br>
-            <strong>output:</strong><br>
-            Engine is on: true<br>
-            Current Speed: 0<br>
-            Current Speed: 5<br>
-            Current Speed: 0
-          </aside>
-          <h3>Code It!</h3>
-          <p class="copy--small box--small">Now use a method of your motor vehicle class: </p>
-          <ol class="list--tall copy--xsmall">
-            <li>call <code>switchEngineState</code> to turn on the car</li>
-            <li>Print <code>engineOn</code> and confirm it's true</li>
-            <li>Print the <code>currentSpeed</code></li>
-            <li>Accelerate the vehicle</li>
-            <li>Print the new <code>currentSpeed</code></li>
-            <li>Decelerate the vehicle</li>
-            <li>Print the new <code>currentSpeed</code></li>
-          </ol>
-        </section>
-        <section>
-          <h3>The Code</h3>
-          <pre><code class='java'>
-          MotorVehicle myVehicle = new MotorVehicle();
-          myVehicle.switchEngineState();
-          System.out.println("Engine is on: " + myVehcile.EngineOn);
-          System.out.println("Current Speed: " + myVehicle.currentSpeed);
-          myVehicle.accelerate();
-          System.out.println("Current Speed: " + myVehicle.currentSpeed);
-          myVehicle.decelerate();
-          System.out.println("Current Speed: " + myVehicle.currentSpeed);
-          </code></pre>
-          <p>Output:</p>
-          <pre><code class='no-highlight'>
-          Engine is on: true
-          Current Speed: 0
-          Current Speed: 5
-          Current Speed: 0
-          </code></pre>
-        </section>
-        <section>
-          <aside class='notes'>
-            public void printDescription(){<br>
-            System.out.println("I'm a Motor Vehicle and my Engine is on "+engineOn+" and i'm going "+currentSpeed+"mph");<br>
-            }<br>
-          </aside>
-          <h3><span class='individually'>Individually</span></h3>
-          <p class="copy--small box--small">Create a method called <code>printDescription</code> that will<br/>print the following statement:</p>
-          <pre><code class='no-highlight'>
-          I'm a MotorVehicle and my engine is on (true/false) and
-          I'm currently going (#)mph.
-          </code></pre>
-          <p class="copy--small box--small">Test it by calling <code>myVehicle.printDescription();</code></p>
-        </section>
-        <section>
-          <h3>The Code</h3>
-          <pre><code class='java'>
-          public void printDescription  () {
-            System.out.println("I'm a MotorVehicle and my engine is on " +
-              engineOn + " and I'm currently going " +
-              currentSpeed + " mph.");
-          }
-          </code></pre>
-        </section>
-      </section>
-
-      <!-- QUESTIONS / Break -->
-      <section>
-        <section>
-          <h3>Questions?</h3>
-          <p class="box--small">Objects &amp; Classes</p>
-          <p class="box--small">Methods, Data Members, &amp; Instances</p>
-        </section>
-        <section>
-          <h3>Break Time!</h3>
-        </section>
-        <section>
-          <h3>Review / Questions?</h3>
-          <p class="box--small">Objects &amp; Classes</p>
-          <p class="box--small">Methods, Data Members, &amp; Instances</p>
-        </section>
-      </section>
-
-      <!-- Data Members -->
-      <section>
-        <section>
-          <aside class='notes'>
-            We've already seen this with the public modifiers on our class declaration and method declaration
-          </aside>
-          <h4>Data Members - Access Modifiers</h4>
-          <p class="box copy--small">We can make these data members public or private</p>
-          <p class="box copy--small">Public members can be accessed by all other classes</p>
-          <p class="box copy--small">Private members can only be accessed within its own class</p>
-        </section>
-        <section>
-          <h3>Code It!</h3>
-          <p class="copy--small box--small">Mark your data members public and private</p>
-          <pre><code class='java'>
-          public boolean engineOn;
-          private int currentSpeed;
-          </code></pre>
-        </section>
-        <section>
-          <h3>Accessing Data Members</h3>
-          <p class="copy--small box--small">If your fields are declared with the <em>public</em> access modifier you can access the data members directly with the format mentioned before: </p>
-          <pre><code class='java'>
-          instanceOfObject.fieldName
-          </code></pre>
-        </section>
-        <section>
-          <aside class='notes'>
-          The field MotorVehicle.currentSpeed is not visible<br>
-          b/c currentSpeed is now private<br>
-          b/c it's public
-          </aside>
-          <h3>Oops!</h3>
-          <p class="copy--small box">What is the error we received?</p>
-          <p class="copy--small box">Why did we receive it?</p>
-          <p class="copy--small box">Why is <code>myVehicle.engineOn</code> not throwing the same error?</p>
-        </section>
-      </section>
-
-      <!-- Data Encapsulation -->
-      <section>
-        <section>
-          <h3>Data Encapsulation</h3>
-          <p class="copy--small box">With OOP, we have the concept of <strong>data encapsulation</strong> which discourages the direct, public access to a class's data members.</p>
-        </section>
-        <section>
-          <h3>Data Encapsulation</h3>
-          <p class="copy--small box"><strong>Data Encapsulation</strong> is to hide or restrict direct access<br/>to an object's members</p>
-          <p class="copy--xsmall box">Instead of direct access a set of accessor and modifier methods<br/>are used to interact with the data.</p>
-        </section>
-        <section>
-          <h3>Benefits</h3>
-          <ol class="list--tall box--small copy--small">
-            <li>Control to make fields read-only and write-only</li>
-            <li>Classes can have absolute control over what is stored in the field</li>
-            <li>Provides a layer of abstraction.  Users of the class (other code or objects) do not need to know the details of the data storage</p>
-          </ol>
-        </section>
-        <section>
-          <aside class='notes'>
-            Change from public to private:<br>
-            private boolean engineOn;
-          </aside>
-          <h3>Encapsulating our Data</h3>
-          <p class="copy--small box--small">Let's make all our data members private</p>
-          <p class="copy--small box--small">Now we'll need to add accessor methods<br/>so we can still access the data</p>
-        </section>
-        <section>
-          <aside class='notes'>
-            public boolean getEngineOn(){<br>
-            return engineOn;<br>
-            }<br>
-          </aside>
-          <h3>Code It!</h3>
-          <p class="copy--small box--small">Add an accessor method to get the current speed: </p>
-          <pre><code class='java'>
-          public int getCurrentSpeed() {
-            return currentSpeed;
-          }
-          </code></pre>
-          <p class="copy--small box--small"><span class='individually'>On your own,</span> add an accessor method for the boolean <code>engineOn</code></p>
-        </section>
-        <section>
-          <pre><code class='java'>
-          public boolean getEngineOn() {
-            return engineOn;
-          }
-          </code></pre>
-        </section>
-        <section>
-          <aside class='notes'>
-            System.out.println("Engine is On: "+myVehicle.getEngineOn());<br>
-            System.out.println("Current Speed: "+myVehicle.getCurrentSpeed());<br>
-            myVehicle.accelerate();<br>
-            System.out.println("Current Speed: "+myVehicle.getCurrentSpeed());<br>
-            myVehicle.decelerate();<br>
-            System.out.println("Current Speed: "+myVehicle.getCurrentSpeed());<br>
-          </aside>
-          <h3>Update our Code</h3>
-          <p class="copy--small box--small">Now instead of calling on your data members directly, use the accessor methods we just created to get their values.</p>
-          <pre><code class='java'>
-        System.out.println("Current Speed: " + myVehicle.getCurrentSpeed());
-          </code></pre>
-        </section>
-      </section>
-
-      <!-- Static -->
-      <section>
-        <section>
-          <h3>Static vs Instance</h3>
-          <p class="copy--small box">When a method is declared static,<br/>it is <strong>shared</strong> by all instances of the class.</p>
-          <p class="copy--small box">In contrast, the type of methods we've been using<br/>have been <strong>unique</strong> to each instance.</p>
-        </section>
-        <section>
-          <aside class='notes'>
-            The constructor
-          </aside>
-          <h3>Static: An Example</h3>
-          <p class="copy--small box--small">How many cars on the road?</p>
-          <p class="copy--small box--small">Create a static data member to keep count of<br/>the MotorVehicles we've created: </p>
-          <pre style="height: 130px; overflow: hidden;"><code class='java'>
-          private static int countCreated = 0;
-          </code></pre>
-          <p class="copy--small box--small">Each time a MotorVehicle is created we want to increment the count.</p>
-          <p class="copy--small box--small">Where would we put the code to do so?</p>
-        </section>
-        <section>
-          <h3>Code It</h3>
-          <pre><code class='java'>
-          public MotorVehicle() {
-            currentSpeed = 0;
-            engineOn = false;
-            countCreated++;
-          }
-          </code></pre>
-        </section>
-        <section>
-          <h3>Add an Accessor</h3>
-          <p class="copy--small box--small">We can create a <em>static</em> accessor method to return the <code>countCreated</code>.</p>
-          <p class="copy--small box--small">Since this method belongs to the <em>class</em> and not an instance of the class, we call the method on the MotorVehicle class</p>
-          <pre><code class='java'>
-          public static int getCountCreated() {
-            return countCreated;
-          }
-          </code></pre>
-          <p class="copy--small box--small"><span class='individually'>On your own,</span> print the countCreated</p>
-        </section>
-        <section>
-          <h3>The Code</h3>
-          <pre><code class='java'>
-          System.out.println("Number of vehicles on the road: " +
-            MotorVehicle.getCountCreated());
-          </code></pre>
-        </section>
-        <section>
-          <aside class='notes'>
-            Note that they are the same because they are referencing the same data member
-          </aside>
-          <h3>Testing our Static Data Member</h3>
-          <ol class="list--tall copy--small box--small">
-            <li>Create a second MotorVehicle myVehicle2</li>
-            <li>Print the result of <code>MotorVehicle.getCountCreated()</code></li>
-            <li>Print the result of <code>MotorVehicle.getCountCreated()</code></li>
-          </ol>
-        </section>
-      </section>
-
-      <!-- QUESTIONS / Break -->
-      <section>
-        <section>
-          <h3>Questions?</h3>
-          <p class="box--small">Data Encapsulation</p>
-          <p class="box--small">Static vs Instance</p>
-        </section>
-        <section>
-          <h3>Break Time!</h3>
-        </section>
-        <section>
-          <h3>Review / Questions?</h3>
-          <p class="box--small">Data Encapsulation</p>
-          <p class="box--small">Static vs Instance</p>
-        </section>
-      </section>
-
-      <!-- Subclass -->
-      <section>
-        <section>
-          <h3>Inheritance and Subclasses</h3>
-          <p class="box copy--small">A class can derive from another class</p>
-          <p class="box copy--small">A class that is derived from another class is called a <em>subclass</em></p>
-          <p class="box copy--small">Subclasses inherit fields and methods from their parent class</p>
-        </section>
-        <section>
-          <h4>Why would you want it?  Inheritance</h4>
-          <ul class="copy--small list--tall box--small">
-            <li>New class is created from an existing class</li>
-            <li>Reuse code</li>
-            <li>Can be used to create a hierarchical class structure</li>
-          </ul>
-        </section>
-        <section>
-          <h3>MotorVehicle -> Car</h3>
-          <p class="copy--small box--small">Let's create a car</p>
-          <p class="copy--small box--small">File > New > Class</p>
-          <p class="copy--small box--small">Name: Car</p>
-          <p class="copy--small box--small">Add the extends keyword and the name of the parent class (MotorVehicle)</p>
-          <pre><code class='java'>
-          public class Car extends MotorVehicle {
-            ...
-          }
-          </code></pre>
-        </section>
-        <section>
-          <h4>What can you do with a Subclass?</h4>
-          <p class="copy--small fragment box--small">You can write a subclass constructor that<br/>invokes the constructor of the superclass</p>
-          <p class="copy--small fragment box--small">You can declare new fields in the subclass<br/> that aren't in the parent class</p>
-          <p class="copy--small fragment box--small">Inherited fields can be used directly</p>
-          <p class="copy--small fragment box--small">A subclass can't inherit private members</p>
-        </section>
-      </section>
-
-      <!-- Super -->
-      <section>
-        <section>
-          <h3>Super</h3>
-          <p class="copy--small box--small">The <code>super</code> keyword can be used in a child<br/>to call a method or member of the parent class</p>
-          <p class="copy--small box--small">The syntax is <code>super.methodName()</code> or <code>super.memberName;</code></p>
-          <p class="copy--small box--small">If you want to call the constructor of the super class,<br/> you simply use the syntax: </p>
-          <pre><code class='java'>
-          super();
-          </code></pre>
-        </section>
-        <section>
-          <aside class='notes'>
-            public Car(){<br>
-            super();<br>
-            }
-          </aside>
-          <h3>Code It!</h3>
-          <p class="copy--small box">Create a car constructor that calls <code>super()</code></p>
-        </section>
-        <section>
-          <h3>The Code</h3>
-          <pre><code class='java'>
-          public class Car extends MotorVehicle {
-            public Car() {
-              super();
-            }
-          }
-          </code></pre>
-        </section>
-      </section>
-
-      <!-- More subclass -->
-      <section>
-        <section>
-          <aside class='notes'>
-            For instance, while a motor boat doesn't necessarily have a door or a trunk all cars do
-          </aside>
-          <h4>What else can you do with a subclass?</h4>
-          <p class="copy--small box">You can declare new fields in subclass that aren't in the parent class.</p>
-        </section>
-        <section>
-          <aside class='notes'>
-            public class Car extends MotorVehicle {<br>
-            <strong>private boolean trunkOpen;<br>
-            private int numDoors;</strong><br>
-            public Car() {<br>
-            super();<br>
-            }<br>
-            }
-          </aside>
-          <h3>Code It!</h3>
-          <ol class="list--tall box--small copy--small">
-            <li>Add a boolean called <code>trunkOpen</code></li>
-            <li>Add an int called <code>numDoors</code></li>
-          </ol>
-        </section>
-        <section>
-          <h3>The Code</h3>
-          <pre><code class='java'>
-          public class Car extends MotorVehicle {
-            private boolean trunkOpen;
-            private int numDoors;
-
-            public Car() {
-              super();
-            }
-          }
-          </code></pre>
-        </section>
-        <section>
-          <aside class='notes'>
-            public Car() {<br>
-            super();<br>
-            <strong>trunkOpen = false;<br>
-            numDoors = 4;</strong><br>
-            }
-          </aside>
-          <h3>Augment the constructor</h3>
-          <p class="copy--small box">Our constructor should also initialize the subclass-only data members</p>
-          <p class="copy--small box">Initialize <code>trunkOpen</code> to false and <code>numDoors</code> to 4</p>
-        </section>
-        <section>
-          <h3>The Code</h3>
-          <pre><code class='java'>
-          public class Car extends MotorVehicle {
-            private boolean trunkOpen;
-            private int numDoors;
-
-            public Car() {
-                super();
-                       trunkOpen = false;
-                       numDoors = 4;
-            }
-          }
-          </code></pre>
-        </section>
-        <section>
-          <aside class='notes'>
-            Car myCar = new Car();<br>
-            myCar.switchEngineState();<br>
-            System.out.println(myCar.getCurrentSpeed());<br>
-            myCar.accelerate();<br>
-            System.out.println(myCar.getCurrentSpeed());<br>
-            myCar.printDescription();<br>
-            System.out.println("Number of Vehicles: "+MotorVehicle.getCountCreated());
-          </aside>
-          <h3>Test it Out</h3>
-          <p class="copy--small box--small">In your HelloWorld class:</p>
-          <ol class="list--tall copy--small box--small">
-            <li>Create a car "myCar"</li>
-            <li>Turn the <code>engineOn</code></li>
-            <li>Print the car's current speed</li>
-            <li>Accelerate the car</li>
-            <li>Print the car's new current speed</li>
-            <li>Call <code>printDescription</code></li>
-            <li>Print the count of <code>MotorVehicles</code> on the road</li>
-          </ol>
-        </section>
-        <section>
-          <aside class='notes'>
-            Highlight that we now have 3 motor vehicles<br>
-            Trace through calling the parent's constructor and methods<br>
-            Car must be rolling down the street...someone forgot the emergency break
-          </aside>
-          <h3>The Code</h3>
-          <pre><code class='java'>
-          Car myCar = new Car();
-          myCar.switchEngineState();
-          System.out.println(myCar.getCurrentSpeed());
-          myCar.accelerate();
-          System.out.println(myCar.getCurrentSpeed());
-          myCar.printDescription();
-          System.out.println("Number of Vehicles on the road: " +
-            MotorVehicle.getCountCreated());
-          </code></pre>
-          <p>Output:</p>
-          <pre><code class='no-highlight'>
-          0
-          5
-          I'm a Motor Vehicle and my Engine is on true and I'm going 5 mph
-          Number of Vehicles on the road: 3
-          </code></pre>
-        </section>
-        <section>
-          <h3><span class='individually'>Individually</span></h3>
-          <p class="copy--small box--small">Add accessor methods for:</p>
-          <ol class="list--tall copy--xsmall">
-            <li><code>trunkOpen</code></li>
-            <li><code>numDoors</code></li>
-          </ol>
-          <p class="copy--small box--small">Call the methods in the Tester</p>
-        </section>
-        <section>
-          <h3>Code</h3>
-          <pre><code class='java'>
-          public boolean getTrunkOpen() {
-            return trunkOpen;
-          }
-
-          public int getNumDoors() {
-            return numDoors;
-          }
-          </code></pre>
-          <pre><code class='java'>
-          System.out.println("number doors: " + myCar.getNumDoors());
-          System.out.println("the trunk is open: " + myCar.getTrunkOpen());
-          </code></pre>
-        </section>
-      </section>
-
-      <!-- Overrides -->
-      <section>
-        <section>
-          <aside class='notes'>
-            Optionally have the  @Override notation<br>
-            Potentially useful since it shows up in all my android projects a # of times..
-          </aside>
-          <h3>Overriding Methods</h3>
-          <p class="copy--small box--small">Instance Methods:</p>
-          <p class="copy--small box--small">An instance method in a subclass (child class) that has the same signature and return type as an instance method in the superclass <em>overrides</em> the superclass's method.</p>
-        </section>
-        <section>
-          <h3>Code It</h3>
-          <ol class="list--tall copy--small box--small">
-            <li>In the Tester, call the <code>printDescription()</code> method for your car</li>
-            <li>Run it</li>
-            <li>Create a <code>printDescription()</code> method for your car class that says:<br/><em>
-              I'm a car!  I have (#) doors!</em></li>
-          </ol>
-        </section>
-        <section>
-          <aside class='notes'>
-            If we comment out the printDescription() code in Car, the code calls the printDescription() of the parent class<br>
-            uncomment and it uses the car<br>
-            Any questions?
-          </aside>
-          <h3>Overriding Methods Cont.</h3>
-          <p class="copy--small box--small">The output of <code>myCar.printDescription()</code> now says: </p>
-          <pre><code class='no-highlight'>
-          I'm a car!  I have 4 doors!
-          </code></pre>
-        </section>
-      </section>
-
-      <!-- Final methods -->
-      <section>
-        <section>
-          <h3>Final Methods</h3>
-          <p class="copy--small box">A Final method cannot be overridden in a subclass</p>
-        </section>
-        <section>
-          <h3>Test it</h3>
-          <p class="copy--small box--small">Add the <em>final</em> keyword to the <code>printDescription()</code> method<br/> inside of the MotorVehicle class</p>
-          <pre><code class='java'>
-          public final void printDescription() {...}
-          </code></pre>
-          <p class="copy--small box--small">The implication is that the subclass, Car,<br/>cannot override the <code>printDescription()</code></p>
-          <p class="copy--small box--small">What happens?</p>
-        </section>
-      </section>
-
-      <!-- Method Overloading -->
-      <section>
-        <section>
-          <h3>A moment to ponder</h3>
-          <p class="copy--small box">Right now we can accelerate and decelrate<br/>our car by the default value of "5"</p>
-          <p class="copy--small box">What if we wanted to really slam on the pedal<br/>and take a 10 mph jump? Or 20??</p>
-          <p class="copy--small box fragment">We can create another accelerate/decelerate method that will take a parameter specifying how much faster or slower we want to go</p>
-        </section>
-        <section>
-          <h3>Method Overloading</h3>
-          <p class="copy--small box--small">Doing so is called <em>Method Overloading</em></p>
-          <pre><code class='java'>
-          public void accelerate(int amount) {
-            currentSpeed = currentSpeed + amount;
-          }
-          </code></pre>
-          <p class="copy--small box--small">Overloading is summed up by:<br/>Same name and different parameter list</p>
-        </section>
-        <section>
-          <h3>An Error?</h3>
-          <p class="copy--small box"><em>The field MotorVehicle.currentSpeed is not visible</em></p>
-          <p class="copy--small box">We've seen something like this before...<br/>it has to do with those access modifiers</p>
-        </section>
-      </section>
-
-      <section>
-        <section>
-          <aside class='notes'>
-            Protected is also accessed by classes in the same package
-          </aside>
-          <h3>Fields</h3>
-          <p class="copy--small box--small">Inherited Fields</p>
-          <p class="copy--small fragment box--small">A subclass can't access a parent's private members</p>
-          <p class="copy--small fragment box--small">There is a third access modifier called Protected</p>
-          <p class="copy--small fragment box--small">Protected fields can be accessed by subclasses</p>
-        </section>
-        <section>
-          <h3>Quick Detour</h3>
-          <p class="copy--small box--small">Hop back to the MotorVehicle class and update your private member <code>currentSpeed</code> to protected.</p>
-          <p class="copy--small box--small">Now that the error has gone, test out your new method: </p>
-          <pre><code class='java'>
-          myCar.accelerate(10);
-          System.out.println(myCar.getCurrentSpeed());
-          </code></pre>
-        </section>
-        <section>
-          <h3><span class='individually'>Individually</span></h3>
-          <p class="copy--small box">Overload the decelerate method in the same fashion</p>
-        </section>
-        <section>
-          <h3>The Code</h3>
-          <pre><code class='java'>
-          public void decelerate(int amount) {
-            currentSpeed = currentSpeed - amount;
-          }
-          </code></pre>
-        </section>
-      </section>
-
-      <section>
-        <aside class='notes'>
-          Polymorphism can be a bit of an advanced topic since it's really covers a lot of ground with various types<br>
-          We want to mention it so they can say "ooooh yeah I've heard of that"  not much to do with it in java
-        </aside>
-        <h3>Polymorphism</h3>
-        <p class="copy--small box">Assuming a subclass has overloaded a method in the parent class:</p>
-        <p class="copy--small box--small"><em>"When an application needs the function, the particular<br/>version is dynamically determined at runtime"</em><br/><small>William Ford, William Topp Data Structures with C++ using STL</small></p>
-      </section>
-
-      <section>
-        <section>
-          <h3>Abstraction</h3>
-          <p class="copy--small box--small">Using the <code>abstract</code> keyword when developing a class indicates that the class will never be instantiated directly</p>
-          <p class="copy--small box--small">However, other classes that extend (inherit) the abstract class (if not abstract themselves) could be instantiated</p>
-        </section>
-        <section>
-          <aside class='notes'>
-            No<br>
-            You have cars<br>
-            Trucks<br>
-            Buses<br>
-            But nothing that's just a generic MotorVehicle
-          </aside>
-          <h3>Building an Abstract Class</h3>
-          <p class="copy--small box--small">Abstract classes can contain partial implementations</p>
-          <p class="copy--small box--small">Will you ever have just a <em>MotorVehicle</em> on the road?</p>
-        </section>
-        <section>
-          <h3>Code It!</h3>
-          <p class="copy--small box--small">Convert our MotorVehicle class to an Abstract Class</p>
-          <p class="copy--small box--small">Add the <em>abstract</em> keyword to the class declaration:</p>
-          <pre><code class='java'>
-          public abstract class MotorVehicle { ... }
-          </code></pre>
-        </section>
-        <section>
-          <h3>Updating our Tests</h3>
-          <p class="copy--small box--small">Now that MotorVehicle is an abstract class,<br/>we can't create an instance of it</p>
-          <p class="copy--small box--small">We have two choices:</p>
-          <ol class="list--tall copy--xsmall">
-            <li>Comment out the code</li>
-            <li>Update the code to create instances of Cars</li>
-          </ol>
-        </section>
-        <section>
-          <aside class='notes'>
-            Flexibility -- MotorVehicle could be used as a parameter in methods  and any MotorVehicle (regardless of subtype) could be passed when declared like this<br>
-            <br>
-            Polymorphism
-          </aside>
-          <h3>Updating Cont.</h3>
-          <p class="copy--small box--small">Since car extends MotorVehicle we can:</p>
-          <pre><code class='java'>
-          MotorVehicle myVehicle = new Car();
-          MotorVehicle myVehicle2 = new Car();
-          </code></pre>
-          <p class="copy--small box--small">Why would you want to do this?</p>
-        </section>
-      </section>
-
-      <section>
-        <aside class='notes'>
-          Hiding really only matters if you used the parent class type when declaring a new instace of a subclass<br>
-          i.e.<br>
-          MotorVehicle myOtherCar = new Car();<br>
-          <br>
-          If we call myOtherCar.staticMethod() it will look at the declared type "MotorVehicle" and call that static method
-        </aside>
-  <!--
-        <h3>Hiding Methods</h3>
-        <p>Class Methods:</p>
-        <p>If a subclass defines a class method with the same signature as a class method in the superclass, the method in the subclass hides the one in the superclass</p>
-      </section>
-      <section>
-  -->
-        <aside class='notes'>
-          Give them plenty of time to play around with creating their own subclass<br>
-          Encourage them to use the concepts discussed
-        </aside>
-        <h3>Code It!</h3>
-        <p class="copy--small box--small"><span class='individually'>On your own,</span> create a Bus that extends MotorVehicle</p>
-        <p class="copy--small box--small">Additional Bus specific Methods to include: </p>
-        <ol class="copy--xsmall list--tall">
-          <li>pickUpPassengers(int numPassengers)</li>
-          <li>dropOffPassengers()</li>
-        </ol>
-      </section>
-
-
-      <section>
-        <aside class='notes'>
-          Circle back to our initial discussion on what it takes to be a motor vehicle and relate that to our motorvehicle<br>
-          ALSO  -- how will other people interact with our class? An interface could tell them
-        </aside>
-        <h3>Interfaces</h3>
-        <p class="copy--small box--small">If an abstract class only contains abstract method declarations,<br/>it is an interface</p>
-        <p class="copy--small box--small">An <em>interface</em> tells people how to interact with an object</p>
-        <p class="copy--small box--small">What are the methods?  What are the parameters they need and what do they return?</p>
-      </section>
-
-      <section>
-        <h3>Where to go from here?</h3>
-        <p class="box copy--small"><a href="http://www.programmr.com/practice/">Programmr Java Tutorial</a> - Programmr.com</p>
-        <p class="box copy--small"><a href="http://www.raywenderlich.com/56107/make-first-android-app-part-1">Write your first Android App</a> - Ray Wenderlich</p>
-      </section>
-
+      <!-- Event Intro -->
       <section>
         <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
         <div class="box--small">
@@ -1035,7 +40,1078 @@
         </div>
       </section>
 
-    </div> <!-- end slides -->
+      <!-- Creating a new project -->
+      <section>
+        <section>
+          <h3>Let's Jump Right In!</h3>
+          <h4 class="blue box--small">Hello, World!</h4>
+          <aside class="notes">Don't worry too much about understanding all the little details, just follow along and we'll walk through it all in a few minutes.</aside>
+        </section>
+        <section>
+            <h3>Creating a new Java Project</h3>
+            <ol class="box--small list--tall copy--small">
+              <li>
+                In IntelliJ, click "New Project" in the project pane, or File > New Project from the toolbar
+              </li>
+              <li>
+                Select Java from the list on the left, and Java 1.8 as your project SDK
+              </li>
+              <li>Enter First sip of Java (or whatever you want) as your project name</li>
+              <li>
+                Hit finish
+              </li>
+            </ol>
+        </section>
+        <section>
+          <h3> Adding our First Class</h3>
+          <ol class="list--tall box--small">
+            <li>File > New</li>
+            <li>From the drop down menu, click Java Class</li>
+            <li>Enter 'HelloWorld' as your class name (no spaces!)</li>
+            <li>Click finish</li>
+          </ol>
+        </section>
+        <section>
+          <h3>Default Code</h3>
+          <pre><code class='java'>
+          public class Main {
+            /**
+             * @param args
+            */
+            public static void main(String[] args) {
+              // Write your first java program here!
+            }
+          }
+          </code></pre>
+        </section>
+
+        <section>
+          <aside class='notes'>
+            public static void main(String[] args) {<br>
+              // TODO Auto-generated method stub<br>
+              <strong>System.out.println("Hello, World!");</strong><br>
+            }
+          </aside>
+          <h3>Writing our first line </h3>
+            <ol class="list--tall copy--small box--small">
+              <li>Inside the main method type:
+              <pre style="height: 30px; overflow: hidden"><code class='java'>System.out.println("Hello, Ann Arbor!");</code></pre></li>
+              <li>Tap the play button in the upper right hand corner</li>
+              <li>Woo!</li>
+            </ol>
+        </section>
+        <section>
+          <h3>The Code </h3>
+          <pre><code class='java'>
+          public class Main {
+            /**
+             * @param args
+            */
+            public static void main(String[] args) {
+              // Write your first java program here!
+              System.out.println("Hello Ann Arbor!");
+            }
+          }
+          </code></pre>
+        </section>
+      </section>
+
+      <!-- Break it Down and look at the example -->
+      <section>
+        <section>
+          <h3>Alright, what just happened?</h3>
+        </section>
+        <section>
+          <h3>Main Method</h3>
+          <p class="box">In Java, every application contains a <strong>main method</strong> that acts as an <span class="green">entry point for the application</span></p>
+        </section>
+        <section>
+          <h3>Comments</h3>
+          <p class="box--small"><span class="blue">Comments let you write notes in the code.</span></p>
+          <p class="box--small copy--xsmall">They're really useful when you're collaborating with other developers<br/>or when you go back and look at your own work.</p>
+          <p class="copy--small">They can be formatted in two ways: </p>
+          <ol class="list--tall box--small copy--xsmall">
+            <li>A single line that starts with <code>//</code></li>
+            <li>One or more lines between <code>/*</code> and <code>*/</code></li>
+          </ol>
+        </section>
+        <section>
+          <pre><code class='java'>
+          public class HelloWorld {
+            /**
+             * @param args
+            */
+            public static void main(String[] args) {
+              // Write your first java program here!
+              //System.out.println("Hello Ann Arbor!");
+            }
+          }
+          </code></pre>
+        </section>
+      </section>
+
+
+      <!-- PART 1 : Language Fundamentals -->
+      <section>
+        <h3>Part 1: <span class="blue">Language Fundamentals</span></h3>
+        <ul class="list--tall box--small">
+          <li>Variables</li>
+          <li>Operators</li>
+          <li>Expressions &amp; Statements</li>
+          <li>Flow Control (Blocks)</li>
+          <li>Exceptions</li>
+        </ul>
+      </section>
+
+      <!-- Part 1 : Variables -->
+      <section>
+        <section>
+          <h3>Variables</h3>
+          <p class="box--small">What are variables?</p>
+          <p class="box--small fragment">Java is a <span class="blue">statically typed</span> language</p>
+          <p class="box--small fragment">You must <span class="green">declare all variables before you use them</span>.<br/> <small>The declaration must include the variable type and the variable name.</small></p>
+          <p class="box--small fragment">You can't change the type of a variable<br/>after you declare it</p>
+        </section>
+        <section>
+          <h4>Statically Typed Variables Illustrated</h4>
+          <p class="box copy--small">You can think of <span class="blue">variables</span> as little boxes that <span class="green">hold a value</span></p>
+          <p class="box--small copy--small fragment">In <span class="yellow">strongly typed</span> langauges, variables only hold the "kind of value" they were declared to:<br/><br/><img src="images/variables_illustrated.png"></p>
+        </section>
+        <section>
+          <aside class='notes'>
+            There are 8 total, but these are three we care about at the moment
+          </aside>
+          <h3>Primitive Variables</h3>
+          <p class="box copy--small">A <span class="green">primitive</span> variable is the most basic type of value in a language.</p>
+          <p class="box copy--small">Primitive types we'll be looking at include: </p>
+          <ul>
+            <li>int</li>
+            <li>double</li>
+            <li>boolean</li>
+          </ul>
+        </section>
+        <section>
+          <aside class='notes'>
+            public static void main(String[] args) {<br>
+              System.out.println("Hello World");<br>
+              <strong>
+                int numberPassengers;<br>
+                int maxNumberPassengers;<br>
+                boolean isFull;<br>
+              </strong>
+            }
+          </aside>
+          <h3>Code It: Creating Variables</h3>
+          <p class="box copy--small">Declare a variable with the following format: </p>
+          <pre style="height: 30px; overflow: hidden"><code class='java'>type name;</code></pre>
+          <div  class="box copy--small"><p>We're going to create the following three variables: </p>
+                    <ul>
+                      <li><code>int numberPassengers</code></li>
+                      <li><code>int maxNumberPassengers</code></li>
+                      <li><code>boolean isFull</code></li>
+                    </ul></div>
+        </section>
+        <section>
+          <h3>The Code</h3>
+          <pre><code class='java'>
+            public static void main(String[] args) {
+              System.out.println("Hello World!");
+              int numberPassengers;
+              int maxNumberPassengers;
+              boolean isFull;
+            }
+          </code></pre>
+         </section>
+      </section>
+
+      <!-- Part 1 : Assignment Operators -->
+      <section>
+        <section>
+          <h3>Operators</h3>
+          <ul class="list--tall box--small">
+            <li>Assignment</li>
+            <li>Arithmetic</li>
+            <li>Equality and Relationship</li>
+            <li>Conditional</li>
+            <li>Precedence</li>
+          </ul>
+        </section>
+
+        <section>
+          <aside class='notes'>
+            public static void main(String[] args) {<br>
+              System.out.println("Hello World");<br>
+              int numberPassengers;<br>
+              int maxNumberPassengers;<br>
+              boolean isFull;<br>
+              <strong>numberPassengers=1;</strong><br>
+            }<br>
+            "Variable Name" "Operator" "Value"
+          </aside>
+          <h3>Assignment Operators</h3>
+          <p class="box copy--small">To assign a value to a variable we use the assignment operator: <code>=</code></p>
+          <p class="box--small copy--small">Let's try it out: </p>
+          <pre><code class='java'>numberPassengers = 1;</code></pre>
+        </section>
+        <section>
+          <aside class='notes'>
+            public static void main(String[] args) {<br>
+              System.out.println("Hello, World!");<br>
+              int numberPassengers;<br>
+              <strong>int maxNumberPassengers=2;</strong><br>
+              boolean isFull;<br>
+              numberPassengers=1;<br>
+            }
+          </aside>
+          <h3>Initialization</h3>
+          <p class="box copy--small">We just <em>initialized</em> <code>numberPassengers</code></p>
+          <p class="box--small copy--small">Initilization is the first (<em>initial</em>) assignment of a value to a variable</p>
+          <p class="box--small copy--xsmall">You should always initialize your variables before using them in your program</p>
+        </section>
+        <section>
+          <p class="copy--small">You can initialize your variables when you declare them: </p>
+          <pre><code class='java'>int maxNumberPassengers = 2</code></pre>
+        </section>
+        <section>
+          <aside class='notes'>
+            public static void main(String[] args) {<br>
+              System.out.println("Hello World");<br>
+              int numberPassengers;<br>
+              int maxNumberPassengers=2;<br>
+              <strong>boolean isFull=false;</strong><br>
+              numberPassengers=1;<br>
+            }
+          </aside>
+          <h3>Code it!</h3>
+          <p class="box--small copy--small">Boolean variables have two values:</p>
+          <ul class="box--small copy--small list--tall">
+            <li>true</li>
+            <li>false</li>
+          </ul>
+          <p class="box--small copy--small"><span class='individually'>On your own,</span> initialize the variable <code>isFull</code> with the value <code>false</code></p>
+        </section>
+        <section>
+          <h3>The Code: </h3>
+          <pre><code class='java'>
+          public static void main(String[] args) {
+            int numberPassengers;
+            int maxNumberPassengers = 2;
+            boolean isFull = false;
+            numberPassengers = 1;
+          }
+          </code></pre>
+        </section>
+      </section>
+
+      <!-- Part 1 : Arithmetic Operators -->
+      <section>
+        <section>
+          <aside class='notes'>
+            Dropping % don't need that with beginners.
+          </aside>
+          <h3>Arithmetic Operators</h3>
+          <p class="box--small copy--small">Just like in math class, we can have arithmetic operators in programming:</p>
+          <p><code>+</code> <code>-</code> <code>*</code> <code>/</code></p>
+          <p>Add, subtract, multiply and divide</p>
+        </section>
+        <section>
+          <aside class='notes'>
+            System.out.println("Hello, World!");<br>
+            int numberPassengers;<br>
+            int maxNumberPassengers=2;<br>
+            boolean isFull=false;<br>
+            numberPassengers=1;<br>
+            <strong>maxNumberPassengers = maxNumberPassengers + 3; //we added a backseat!</strong><br>
+          </aside>
+          <h3>Code It!</h3>
+          <pre><code class='java'>
+          maxNumberPassengers = maxNumberPassengers + 3;
+          // we added a backseat!
+          </code></pre>
+        </section>
+        <section>
+          <aside class='notes'>
+            System.out.println("Hello, World!");<br>
+            int numberPassengers;<br>
+            int maxNumberPassengers=2;<br>
+            boolean isFull=false;<br>
+            numberPassengers=1;<br>
+            maxNumberPassengers = maxNumberPassengers + 3; //we added a backseat!<br>
+            <strong>numberPassengers=numberPassengers+1;<br>
+              System.out.println("Number of Passengers: " + numberPassengers);</strong><br>
+          </aside>
+          <h3>Code it!</h3>
+          <p class='box--small copy--small individually'>On your own: </p>
+          <ul class="list--tall copy--small">
+            <li>Increment the <code>numberPassengers</code> value by one</li>
+            <li>Then use the <code>System.out.println</code> method to show the result:
+            </li>
+          </ul>
+          <pre><code class='java'>
+          System.out.println("Number of Passengers: " + numberPassengers);
+          </code></pre>
+        </section>
+        <section>
+          <h3>The Code</h3>
+          <pre style="height: 100px; overflow: hidden;"><code class='java'>
+          numberPassengers = numberPassengers + 1;
+          System.out.println("Number of Passengers: " + numberPassengers);
+          </code></pre>
+          <p class="copy--small box--small">You can write this in shorthand using the <code>++</code> operator: </p>
+          <pre style="height: 100px; overflow: hidden;"><code class='java'>
+          numberPassengers++;
+          </code></pre>
+          <p class="copy--small box--small">Output: </p>
+          <pre style="height: 100px; overflow: hidden;"><code class='no-highlight'>
+          Hello World
+          Number of Passengers: 2
+          </code></pre>
+        </section>
+
+        <section>
+          <aside class='notes'>
+            int currentSpeed = 0;<br>
+            currentSpeed = currentSpeed + 20;<br>
+            System.out.println("Current Speed: "+currentSpeed);<br>
+            currentSpeed = currentSpeed/2;<br>
+            System.out.println("Current Speed: "+currentSpeed);<br>
+            currentSpeed = currentSpeed *3;<br>
+            System.out.println("Current Speed: "+currentSpeed);<br>
+          </aside>
+          <h4>Code It: <span class="blue">Playing with Arithmetic Operators</span></h4>
+          <p class="box--small copy--small"><span class='individually'>On your own:</span></p>
+          <ol class="copy--xsmall">
+            <li>Create an integer called <code>currentSpeed</code></li>
+            <li>Initialize it with the value <code>0</code></li>
+            <li>Increase the value by 20mph</li>
+            <li>Print the new current speed</li>
+            <li>Now reduce your speed in half</li>
+            <li>Print the new current speed</li>
+            <li>Increase your speed times three</li>
+            <li>Print the new current speed</li>
+          </ol>
+        </section>
+        <section>
+          <h3>Expected Output: </h3>
+          <pre><code class='no-highlight'>
+          Hello World
+          Number of Passengers: 2
+          Current Speed: 20
+          Current Speed: 10
+          Current Speed: 30
+          </code></pre>
+        </section>
+        <section>
+          <h3>The Code</h3>
+          <pre><code class='java'>
+          int currentSpeed = 0;
+          currentSpeed = currentSpeed + 20;
+          System.out.println("Current Speed: "+currentSpeed);
+          currentSpeed = currentSpeed / 2;
+          System.out.println("Current Speed: "+currentSpeed);
+          currentSpeed = currentSpeed * 3;
+          System.out.println("Current Speed: "+currentSpeed);
+          </code></pre>
+        </section>
+      </section>
+
+      <!-- Part 1 : Equality & Relationship Operators -->
+      <section>
+        <section>
+          <h4>Equality and Relationship Operators</h4>
+          <p class="copy--small box--small">These operators evaluate to <code>true</code> or <code>false</code></p>
+          <table class="copy--small" style="width: 400px; margin: 0 auto;">
+            <tr>
+              <td><code>==</code></td><td>Equal</td>
+            </tr>
+            <tr>
+              <td><code>!=</code></td><td>Not Equal</td>
+            </tr>
+            <tr>
+              <td><code>&lt;</code></td><td>Less than</td>
+            </tr>
+            <tr>
+              <td><code>></code></td><td>Greater than</td>
+            </tr>
+            <tr>
+              <td><code>&lt;=</code></td><td>Less than or Equal to</td>
+            </tr>
+            <tr>
+              <td><code>>=</code></td><td>Greater than or Equal to</td>
+            </tr>
+          </table>
+        </section>
+        <section>
+          <h3>Code it!</h3>
+          <pre><code class='java'>
+          isFull = (numberPassengers == maxNumberPassengers);
+          System.out.println("The car is Full: " + isFull);
+          </code></pre>
+          <p>Output:</p>
+          <pre><code class='no-highlight'>
+          The car is full: false
+          </code></pre>
+        </section>
+        <section>
+          <aside class='notes'>
+            Example:<br>
+            isFull = numberPassengers &lt; maxNumberPassengers;<br>
+            System.out.println("We have less than the number of Max Passengers: "+isFull);<br>
+            boolean noMore = numberPassengers >= maxNumberPassengers;<br>
+            System.out.println("I'm full and/or overbooked! "+noMore);<br>
+
+            We have less than the number of Max Passengers: true<br>
+            I'm full and/or overbooked! false<br>
+          </aside>
+          <h3>Code It - <span class='individually'>Individually</span></h3>
+          <ol class="list--tall copy--small box--small">
+            <li>In a boolean <code>hasSpace</code>, assign the resulting value of the question "<code>numberPassengers</code> is less than <code>maxNumberPassengers</code>?"</li>
+            <li>Print the result</li>
+            <li>Test if the <code>numberPassengers</code> is greater than or equal to <code>maxNumberPassengers</code> and store it in <code>isFull</code></li>
+            <li>Print the result</li>
+          </ol>
+        </section>
+        <section>
+          <h3>Example Answer</h3>
+          <pre><code class='java'>
+isFull = numberPassengers &lt; maxNumberPassengers;
+System.out.println("We have less than the number of Max Passengers: "
+  + isFull);
+boolean noMore = numberPassengers > maxNumberPassengers;
+System.out.println("I'm full and/or overbooked! " + noMore);
+          </code></pre>
+          <p>Output:</p>
+          <pre><code class='no-highlight'>
+          We have less thatn the number of Max Passengers: true
+          I'm full and/or overbooked! false
+          </code></pre>
+        </section>
+      </section>
+
+      <!-- Part 1 : Conditional Operators -->
+      <section>
+        <section>
+          <aside class='notes'>
+            So evaluate x>0 <br>
+            now evaluate y> 0<br>
+            now evaluate if both of those things were true
+          </aside>
+          <h3>Conditional Operators</h3>
+          <table style="width: 100px; margin: 1em auto">
+            <tr>
+              <td><code>&amp;&amp;</code></td><td>And</td>
+            </tr>
+            <tr>
+              <td><code>||</code></td><td>Or</td>
+            </tr>
+          </table>
+          <p class="copy--small box--small">We can check if two (x and y) values are true</p>
+          <pre><code class='java'>
+          positiveNumbers = x > 0 &amp;&amp; y > 0;
+          </code></pre>
+        </section>
+        <section>
+          <aside class='notes'>
+            I'm only endangering myself false<br>
+            Mention Short Circuiting? If class is doing well with concepts.
+          </aside>
+          <h3>Code It!</h3>
+          <pre><code class='java'>
+    boolean dangerToSelfOnly = numberPassengers == 1 &amp;&amp; currentSpeed > 55;
+    System.out.println("I'm only endangering myself " + dangerToSelfOnly);
+          </code></pre>
+        </section>
+      </section>
+
+      <!-- Part 1 : Precedence -->
+      <section>
+        <section>
+          <h3>Precedence</h3>
+          <p class="box copy--small">Just like in math class where you multiply and divide before you add and subtract, <strong>all our operators have an order of operations</strong>.</p>
+          <p class="copy--xsmall">Check out the
+          <a href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html" target="_blank">Official Documentation</a></p>
+        </section>
+        <section>
+          <h3>Precedence</h3>
+          <p class="box copy--small">Our previous example: </p>
+          <pre style="height: 30px; overflow: hidden;"><code class='java'>positiveNumbers = x > 0 &amp;&amp; y > 0;</code></pre>
+          <p  class="box--small copy--small">According to the precedence chart, evaluates:</p>
+          <table style="width: 400px; margin: 0 auto;" class="copy--small">
+            <tr>
+              <td><code>x > 0, y > 0</code></td><td>relational</td>
+            </tr>
+            <tr>
+              <td><code>&amp;&amp;</code></td><td>logical and</td>
+            </tr>
+            <tr>
+              <td><code>=</code></td><td>assignment</td>
+            </tr>
+          </table>
+          </section>
+        </section>
+
+      <!-- Part 1 : Expressions -->
+      <section>
+        <section>
+          <h3>Expressions</h3>
+          <p class="copy--small box--small">An expression is a <strong>piece of code that evaluates to a value</strong>.</p>
+          <p class="copy--small box--small">Example:</p>
+          <pre style="height: 70px; overflow: hidden"><code>
+          numberPassengers &lt; maxNumberPassengers
+          </code></pre>
+          <p class="copy--small box--small">This expression could be true or false depending on the values of the varaibles, but it is not a complete statement</p>
+        </section>
+
+        <!-- Part 1 : Statements -->
+        <section>
+          <aside class='notes'>
+            There is no semi-colon and the expression on the previous page returns a value but nothing happens.
+          </aside>
+          <h3>Statement</h3>
+          <p class="copy--small box--small"><strong>A statement is a complete unit of execution.</strong>  It's a sentence in the Java Language.  An instruction that can be carried out from start to end.</p>
+          <p class="copy--small box--small">Let's take a look at one of the statements we've written:</p>
+          <pre><code class='java'>
+      boolean dangerToSelfOnly = numberPassengers == 1 &amp;&amp; currentSpeed > 55;
+              </code></pre>
+        </section>
+      </section>
+
+      <!-- QUESTIONS / Break -->
+      <section>
+        <section>
+          <h3>Questions?</h3>
+          <p class="box--small">Variables &amp; Operators</p>
+          <p class="box--small">Expression &amp; Statements</p>
+        </section>
+        <section>
+          <h3>Break Time!</h3>
+        </section>
+        <section>
+          <h3>Review / Questions?</h3>
+          <p class="box--small">Variables &amp; Operators</p>
+          <p class="box--small">Expression &amp; Statements</p>
+        </section>
+      </section>
+
+      <!-- Flow Control -->
+      <section>
+        <section>
+          <h3>Flow Control</h3>
+          <p class="box copy--wsmall">In our example program, each statement is executed <strong>one after another</strong>.</p>
+          <p class="fragment box copy--small">What if we wanted to make a choice about whether or not a statement was executed?</p>
+          <p class="fragment box--small copy--small">If the number of passengers is less than the max allowed,<br/>offer a ride home else apologize?</p>
+        </section>
+        <section>
+          <h3>If/Else</h3>
+          <p class="box--small">The If/Else statement allows us to make a choice</p>
+          <pre><code class='java'>
+          if (x &lt; 5) {
+            System.out.println("Yay!");
+          } else {
+            System.out.println("Boo!");
+          }
+          </code></pre>
+        </section>
+        <section>
+          <aside class='notes'>
+            if(numberPassengers < maxNumberPassengers) {<br>
+            System.out.println("Would you like a lift?");<br>
+            }<br>
+            else {<br>
+            System.out.println("Sorry, we're too full");<br>
+            }<br>
+            <br>
+            Expected output: <br>
+            Would you like a lift?
+          </aside>
+          <h3>Code it!</h3>
+          <p class="copy--small box">If the number of passengers is less than the max number of passengers allowed, offer a ride</p>
+          <p class="copy--small box">Otherwise, apologize</p>
+        </section>
+        <section>
+          <h3>The Code</h3>
+          <pre><code class='java'>
+          if (numberPassengers &lt; maxNumberPassengers) {
+            System.out.println("Would you like a lift?");
+          } else {
+            System.out.println("Sorry, we're too full!");
+          }
+          </code></pre>
+          <p>Output: </p>
+          <pre><code class='no-highlight'>
+          Would you like a lift?
+          </code></pre>
+        </section>
+        <section>
+          <aside class='notes'>
+            Highlight the order<br>
+            if goes at the top<br>
+            else if goes in the middle (as many as you want)<br>
+            Else goes at the bottom
+          </aside>
+          <h3>else if</h3>
+          <p class="box--small copy--small">You also have an <code>else if</code> statement at your disposal:</p>
+          <pre><code class='java'>
+          if (x &lt; 5) {
+            System.out.println("too small");
+          } else if ( x == 5) {
+            System.out.println("Just right");
+          } else {
+            System.out.println("too big!");
+          }
+          </code></pre>
+        </section>
+        <section>
+          <aside class='notes'>
+            if(numberPassengers &lt; maxNumberPassengers) {<br>
+            System.out.println("Would you like a lift?");<br>
+            }<br>
+            else if(numberPassengers == maxNumberPassengers-1){<br>
+            System.out.println("Room for one more!");<br>
+            }<br>
+            else {<br>
+            System.out.println("Sorry, we're too full");<br>
+            }
+          </aside>
+          <h3>Code it - <span class='individually'>Individually</span></h3>
+          <p class="copy--small box--small">Add an <code>else if</code> statement to your<br/>current <code>if</code>/<code>else</code> block that prints out:</p>
+          <p class="copy--small box--small"><i>"We have room for one more"</i></p>
+          <p class="copy--small box--small"><strong>If</strong> the # of passengers is equal to the # of Max passengers minus 1.</p>
+        </section>
+        <section>
+          <h3>The Code</h3>
+          <pre><code class='java'>
+          if (numberPassengers &lt; maxNumberPassengers) {
+            System.out.println("Would you like a lift?");
+          } else if (numberPassengers == maxNumberPassengers-1) {
+            System.out.println("We have room for one more!");
+          } else {
+            System.out.println("Sorry, we're too full!");
+          }
+          </code></pre>
+        </section>
+      </section>
+
+      <!-- Switch Statements -->
+      <section>
+        <section>
+          <h3>Switch Statements</h3>
+          <p class="copy--small box">A switch statement <strong>evaluates the value</strong> of an integer or String and <strong>executes all the statements following the matching "case" block.</strong></p>
+          <p class="copy--xsmall box">In other words, it evaluates the conditional once and starts execution<br/>from there until it is told to stop or hits the end of the block.</p>
+        </section>
+        <section>
+          <h3>Switch Statement Example</h3>
+          <pre><code class='java'>
+          switch (holiday) {
+            case "new years":
+              System.out.println("Happy New Year!");
+              break;
+            case "fourth of july":
+              System.out.println("Happy Independence Day");
+              break;
+            default:
+              System.out.println("Happy Holidays!");
+          }
+          </code></pre>
+        </section>
+        <section>
+          <aside class='notes'>
+            switch(numberPassengers){<br>
+            case 1: System.out.println("I love driving by myself");<br>
+            case 2: System.out.println("They always call shotgun");<br>
+            case 3: System.out.println("third wheel");<br>
+            case 4: System.out.println("Full house!");<br>
+            default: System.out.println("over the top");<br>
+            }<br>
+            <br>
+            <strong>Expected output:</strong><br>
+            they always call shotgun<br>
+            third wheel<br>
+            Fullhouse!<br>
+            Over the Top
+          </aside>
+          <h3>Code It!</h3>
+          <p class="box--small copy--small">Let's create a switch statement based<br/>on the <code>numberPassengers</code> variable.</p>
+          <p class="box--small copy--small">Print the following sayings for each corresponding value: </p>
+          <ol class="list--tall copy--xsmall">
+            <li>I love driving by myself</li>
+            <li>They always call shotgun</li>
+            <li>Third Wheel</li>
+            <li>Full House </li>
+            <li style="list-style-type: none"><strong>Default:</strong> Over the top!</li>
+          </ol>
+        </section>
+        <section>
+          <aside class='notes'>
+            In our case numberPassengers is 2<br>
+            so everthing (including) after "They always call shotgun" prints
+          </aside>
+          <h3>Wait a Minute! Take a break!</h3>
+          <p class="box copy--small">Without any <code>break</code> statements the switch block "falls through" and executes everything after the matching value too!</p>
+        </section>
+        <section>
+          <h3>Code it!</h3>
+          <p class="box copy--small"><span class='individually'>On your own,</span> add a <code>break</code> statement to all of the cases</p>
+          <p>Example:</p>
+          <pre><code class='java'>
+          case 1: System.out.println("I love driving by myself");
+            break;
+          </code></pre>
+        </section>
+        <section>
+          <aside class='notes'>
+            switch(numberPassengers){<br>
+            case 1: System.out.println("I love driving by myself");<br>
+            break;<br>
+            case 2: System.out.println("They always call shotgun");<br>
+            break;<br>
+            case 3: System.out.println("third wheel");<br>
+            break;<br>
+            case 4: System.out.println("Full house!");<br>
+            break;<br>
+            default: System.out.println("over the top");<br>
+            }<br>
+            <br>
+            The default block is at the bottom of the switch block<br>
+            it cannot fall through
+          </aside>
+          <h3>The Code</h3>
+          <pre><code class='java'>
+          switch (numberPassengers) {
+            case 1:
+              System.out.println("I love driving by myself");
+              break;
+            case 2:
+              System.out.println("They always call shotgun");
+              break;
+            case 3:
+              System.out.println("Third Wheel");
+              break;
+            case 4:
+              System.out.println("Full House");
+              break;
+            default:
+              System.out.println("Over the top!");
+          }
+          </code></pre>
+          <p class="box--small copy--small">Why isn't there a break statement on the default block?</p>
+        </section>
+      </section>
+
+      <!-- Loops -->
+      <section>
+        <section>
+          <h3>Loops</h3>
+          <p class="box copy--small">With <strong>loops</strong>, we can <span class="blue">write code once</span><br/>and have it <span class="green">executed multiple times</span> in a row.</p>
+        </section>
+        <section>
+          <h3>For Loop</h3>
+          <p class="box copy--small">In cases where we know how many times we wish to execute the loop, we can use a <em>for loop</em></p>
+          <p class="box copy--xsmall">The for loop structure calls for a variable initialized to a value,<br/>the termination condition, and the increment</p>
+          <pre><code class='java'>
+          for (initial variable; test condition; increment) { }
+          </code></pre>
+        </section>
+        <section>
+          <aside class='notes'>
+            for(int mySpeed=0; mySpeed<55; mySpeed+=10){<br>
+              System.out.println("I'm going "+mySpeed+" mph!");<br>
+            }
+          </aside>
+          <h3>Code it!</h3>
+          <pre><code class='java'>
+          for (int mySpeed = 0; mySpeed &lt; 55; mySpeed +=10) {
+            System.out.println("I'm going " + mySpeed + "mph!");
+          }
+          </code></pre>
+        </section>
+        <section>
+          <h3>Output</h3>
+          <pre><code class='no-highlight'>
+          I'm going 0 mph!
+          I'm going 10 mph!
+          I'm going 20 mph!
+          I'm going 30 mph!
+          I'm going 40 mph!
+          I'm going 50 mph!
+          </code></pre>
+        </section>
+        <section>
+          <h3>While Loop</h3>
+          <p class="box copy--small">At other times, we want to execute our code<br/>for an unknown number of iterations</p>
+          <p class="box copy--xsmall">It simply executes while some condition is true<br/>regardless of how many iterations it takes.</p>
+          <pre><code class='java'>
+          while (condition) {
+            ...
+          }
+            </code></pre>
+        </section>
+        <section>
+          <aside class='notes'>
+            isFull = numberPassengers == maxNumberPassengers;<br>
+            while(hasSpace){<br>
+            numberPassengers++;<br>
+            System.out.println("I'm Carrying: "+numberPassengers);<br>
+            hasSpace = numberPassengers &lt; maxNumberPassengers;<br>
+            }<br>
+            <br>
+            <strong>Output:</strong> <br>
+            I'm Carrying: 3<br>
+            I'm Carrying: 4<br>
+            I'm Carrying: 5
+          </aside>
+          <h3>Code It!</h3>
+          <p class="box copy--small">While <code>hasSpace</code> is true, add a passenger<br/>then update the value of <code>hasSpace</code></p>
+        </section>
+        <section>
+          <h3>The Code</h3>
+          <pre><code class='java'>
+          isFull = numberPassengers == maxNumberPassengers;
+          while (!isFull) {
+            // We'll add a passenger
+            numberPassengers ++;
+            // We'll notifying people how many passengers we have
+            System.out.println("I'm carrying: " + numberPassengers);
+            // We'll update whether or not we're full
+            isFull = numberPassengers == maxNumberPassengers;
+          }
+          </code></pre>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h3>Questions?</h3>
+          <p class="box--small">Flow Control Constructs</p>
+          <p class="box--small">If / Else / Else If</p>
+          <p class="box--small">Switch / Case / Break / Default</p>
+          <p class="box--small">For Loops / While Loops</p>
+        </section>
+        <section>
+          <h3>Break Time!</h3>
+        </section>
+        <section>
+          <h3>Review / Questions?</h3>
+          <p class="box--small">Flow Control Constructs</p>
+          <p class="box--small">If / Else / Else If</p>
+          <p class="box--small">Switch / Case / Break / Default</p>
+          <p class="box--small">For Loops / While Loops</p>
+        </section>
+      </section>
+
+      <section>
+        <section>
+          <h3>Part 2: <span class="blue">Introduction to Objects</span></h3>
+          <p class="box copy--small">All real-world obejcts have a <em>state</em> and a <em>behavior</em></p>
+          <p class="box copy--small">We'll use this approach to looking at objects<br/>to describe objects in our programming</p>
+        </section>
+        <section>
+          <h4>Describing Objects In This Room</h4>
+          <p class="box copy--small">Let's take a minute to identify objects in this room and talk about them by identifying their state and behavior</p>
+        </section>
+      </section>
+
+      <!-- Arrays -->
+      <section>
+        <section>
+          <h3>Array Objects</h3>
+          <ul class="box list--xtall copy--small">
+            <li>Arrays are <span class="blue">containers</span> for values.</li>
+            <li class="fragment">Arrays <span class="yellow">hold a single type</span> of value.</li>
+            <li class="fragment">Arrays are a <span class="green">fixed length</span>.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Real World Array</h3>
+          <p class="box copy--small">7-day pill box - every slot holds a pill</p>
+        </section>
+        <section>
+          <h3>Syntax - Creating an Array</h3>
+          <pre><code class='java'>
+          String[] garage = new String[3];
+          garage[0] = "Chevy";
+          garage[1] = "Ford";
+          garage[2] = "Pontiac";
+          </code></pre>
+        </section>
+        <section>
+          <aside class='notes'>
+            It's size/length is 3<br>
+            It's currently holding Chevy, Ford and Pontiac
+          </aside>
+          <h3>Array - States</h3>
+          <p class="box copy--small">The state of an array can be described by: </p>
+          <ul class="list--tall copy--xsmall">
+            <li>How big it is or how many values it can hold (also called its length)</li>
+            <li>The values it currently holds</li>
+          </ul>
+        </section>
+        <section>
+          <aside class='notes'>
+            Highlight  Making use of .length state/property
+          </aside>
+          <h4>Arrays and For loops are Great Friends </h4>
+          <pre><code class='java'>
+          for (int i = 0; i &lt; garage.length; i++) {
+            System.out.println("Garage Slot " + i + "holds " + garage[i]);
+          }
+          </code></pre>
+        </section>
+      </section>
+
+      <!-- Strings -->
+      <section>
+        <section>
+          <h3>String Object</h3>
+          <p class="box--small copy--small">We created an Array of Strings</p>
+          <p class="box--small copy--small"><a href="http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html">Strings</a> are a type of Object</p>
+          <p class="box--small copy--small">We can create a single String object by declaring a variable of type String and assigning it a new String object with some value</p>
+          <pre><code class='java'>
+          String dreamCar = new String("Corvette");
+          </code></pre>
+        </section>
+        <section>
+          <h3>Methods</h3>
+          <p class="box copy--small">An object's <span class="blue">behavior</span> is defined in its <span class="green">methods</span>.</p>
+          <p class="box copy--small">A method is a <strong>block of code that will execute when called upon</strong>.</p>
+        </section>
+        <section>
+          <h3>String Methods (behaviors)</h3>
+          <p class="box copy--small">Some common things String can do: </p>
+          <ul class="list--tall copy--xsmall">
+            <li class="fragment">A String can tell you its length</li>
+            <li class="fragment">A String can tell you whether or not it contains a certain value</li>
+            <li class="fragment">It can convert itself to lowercase or uppercase</li>
+          </ul>
+        </section>
+        <section>
+          <h3>An example in Code</h3>
+          <pre><code class='java'>
+          String dreamCar = new String("Corvette");
+          System.out.println("Length: " + dreamCar.length());
+          System.out.println("Does the word contain 'vette'?" +
+            dreamCar.contains("vette"));
+          System.out.println("It's all lower " + dreamCar.toLowerCase());
+          </code></pre>
+        </section>
+        <section>
+          <aside class='notes'>
+            System.out.println("It's all upper " + dreamCar.toUpperCase());
+          </aside>
+          <h3 class='individually'>On your own</h3>
+          <p class="box copy--small">Call and print the result of the <code>toUpperCase()</code> method</p>
+        </section>
+        <section>
+          <h3>The Code</h3>
+          <pre><code class='java'>
+          System.out.println("It's all upper " + dreamCar.toUpperCase());
+          </code></pre>
+        </section>
+      </section>
+
+      <!-- Methods -->
+      <section>
+        <section>
+          <h3>Methods Continued</h3>
+          <p class="box copy--small">Methods have a <span class="blue">return type</span> and a <span class="green">parameters list</span></p>
+        </section>
+        <section>
+          <h3>Methods Return Type</h3>
+          <p class="box copy--small"><strong>Return Type</strong> - If the method returns a value, what type is it?</p>
+          <p class="box copy--small">Let's consider the <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html#length()" target="_blank">length() method</a> of a String</p>
+        </section>
+        <section>
+          <h3>Methods Parameters</h3>
+          <p class="box--small copy--small"><strong>Parameters</strong> - A list of values that the methods expects<br/>as input when you call on it.</p>
+          <pre><code class='java'>
+          .contains("vette");
+          </code></pre>
+        </section>
+      </section>
+
+      <!-- Wrapper Classes -->
+      <section>
+        <section>
+          <h3>Wrapper Classes</h3>
+          <p class="box copy--small">For each of the <em>primitive data types</em> we've seen,<br/>there is a <span class="green">wrapper class</span></p>
+          <p class="box fragment copy--small">A wrapper class <span class="yellow">wraps the primitive in an object</span>.</p>
+          <p class="box fragment copy--xsmall">They have the <strong>same names</strong> as the primitive types.<br/> They're full words and start with a capital letter: Integer, Double, Boolean</p>
+        </section>
+        <section>
+          <h3>Wrapper Classes</h3>
+          <p class="box copy--small">Reasons to use a number object vs. a primitive:</p>
+          <ol class="list--tall copy--xsmall">
+            <li class="fragment">A method expects an object</li>
+            <li class="fragment">Using a constant defined by the Number class</li>
+            <li class="fragment">Use of the Number class methods (converting to/from types or Strings and between number systems)</li>
+            <!-- TODO clear up the wording here, not a very readable slide -->
+          </ol>
+        </section>
+        <section>
+          <h4>Let's create some Number Objects</h4>
+          <p class="box--small copy--small">We can create a Double by passing it a primitive double value: </p>
+          <pre><code class='java'>
+          Double mpg = new Double(30.5);
+          </code></pre>
+          <p class="box--small copy--small">We can also create a Double by passing it a String: </p>
+          <pre><code class='java'>
+          Double mpg = new Double("49.1");
+          </code></pre>
+        </section>
+      </section>
+
+      <!-- Constructors -->
+      <section>
+        <aside class='notes'>
+          Take a look at the constructor summary in the Java Docs
+        </aside>
+        <h3>Constructors</h3>
+        <p class="box--small copy--small">When we create an object, its data members have an initial value.</p>
+        <p class="box--small copy--small">The <span class="blue">initial state of the object</span> is set by its <span class="green">constructor</span>.</p>
+        <p class="box--small copy--small">A constructor may take one or more parameters<br/>to be used when setting the initial values.</p>
+        <p class="box copy--xsmall">Check out <a href="http://docs.oracle.com/javase/1.4.2/docs/api/java/lang/Double.html" target="_blank">Double</a>
+      </section>
+
+      <!-- Double -->
+      <section>
+        <h4>Double -> String &amp; String -> Double</h4>
+        <p class="box copy--small">Doubles can be converted to a String with the <a href="http://docs.oracle.com/javase/1.4.2/docs/api/java/lang/Double.html#toString()" target="_blank">toString()</a> method.</p>
+        <p class="box copy--small">Meanwhile, we can get a primitive double value by calling on <a href="http://docs.oracle.com/javase/1.4.2/docs/api/java/lang/Double.html#parseDouble(java.lang.String)" target="_blank">Double.parseDouble(double x);</a></p>
+      </section>
+
+      <!-- Null -->
+      <section>
+        <h3>Null</h3>
+        <p class="box copy--small">A value that represents nothingness</p>
+        <p class="box copy--small">Null represents no value</p>
+        <p class="box copy--xsmall">If a boolean can be yes or no, a null value would signify "undecided"</p>
+      </section>
+
+      <section>
+        <section>
+          <h3>Questions?</h3>
+          <p class="box--small">Object Oriented Programming</p>
+        </section>
+
+        <section>
+          <h3>Review / Questions?</h3>
+          <p class="box--small">Variables &amp; Operators</p>
+          <p class="box--small">Flow Control Constructs</p>
+          <p class="box--small">Object Oriented Programming</p>
+        </section>
+
+        <!-- Event Outro -->
+        <section>
+          <img src="images/gdi_logo_badge.png" class="img--bare" height="450px" />
+          <div class="box--small">
+            <h3 class="event__title">Intro to Java<br /><small>And Object Oriented Programming</small></h3>
+            <p><small>Steve Coffey &nbsp; | &nbsp; @MovieGuy_Steve &nbsp; | &nbsp; @gdiannarbor  &nbsp; | &nbsp; #GDIA2 &nbsp; | &nbsp; #IntroToJava</small></p>
+            <aside class="notes">
+            </aside>
+          </div>
+        </section>
+      </section>
+    </div>
 
     <footer>
       <div class="copyright">
