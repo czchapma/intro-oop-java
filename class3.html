@@ -87,7 +87,10 @@
 				<section>
 					<h3>Review: <span class="blue">Objects</span></h3>
 					<ul class="list--tall box--small copy--small">
-						<li><strong>States</strong> - Also called <span class="blue">properties</span> and data members.</li>
+						<li>
+							<strong>States</strong> - <span class="blue">Properties</span> and
+							<span class="blue">data members</span> describe the <strong>state</strong> of the object.
+						</li>
 						<li><strong>Behaviors</strong> - actions the object can take. Known as <span class="blue">methods.</span></li>
 					</ul>
 				</section>
@@ -129,7 +132,7 @@
 					</code></pre>
 				</section>
 				<section>
-					<aside class='notes'>
+					<aside class="notes">
 						Create an "Interface" based on this discussion<br>
 						Have an engine whose state can be on or off<br>
 						you can turn an engine on<br>
@@ -172,57 +175,57 @@
 					</ol>
 				</section>
 				<section>
-					<h4>Create a new class with a main method</h4>
+					<h4>Create New Class to Run Our Code</h4>
 					<ol class="list--tall box copy--small">
-						<li>File > New > Class</li>
-						<li>Class Name: Tester</li>
-						<li>Don't forget to add to add our main function:<br/> <code>public static void main(String[]
+						<li>Right click on the new package.</li>
+						<li>Select New > Class.</li>
+						<li>Class Name: <strong>Tester</strong></li>
+						<li>Add the main function so we can run our code:<br/> <code>public static void main(String[]
 							args)</code></li>
 					</ol>
 				</section>
 				<section>
-					<h3>Create a new class</h3>
+					<h3>Create a New Class</h3>
 					<ol class="list--tall box">
-						<li>File > New > Class</li>
-						<li>Class Name: MotorVehicle</li>
+						<li>Right click on the new package.</li>
+						<li>Select New > Class.</li>
+						<li>Class Name: <strong>MotorVehicle</strong></li>
 					</ol>
 				</section>
 				<section>
 					<h3>The Code</h3>
-          <pre><code class='java'>
+					<pre><code class='java'>
 	          public class MotorVehicle {
 	          }
-          </code></pre>
+					</code></pre>
 				</section>
 			</section>
 
 			<!-- Data Members -->
 			<section>
 				<section>
-					<aside class='notes'>
-						Flip back to our notes and list the data members
-					</aside>
 					<h3>Data Members</h3>
 
-					<p class="box copy--small">An Object has one or more <span class="blue">data members</span> that
-						<span class="green">describe its state</span>.</p>
+					<p class="box copy--small">
+						An Object has one or more <span class="blue">data members</span> that <span class="green">describe its state</span>.
+					</p>
 				</section>
 				<section>
-					<aside class='notes'>
+					<aside class="notes">
 						public class MotorVehicle {<br>
-						boolean engineOn;<br>
-						int currentSpeed;<br>
-						int maxNumberPassengers;<br>
-						int numCurrentPassengers;<br>
+							boolean isEngineRunning;<br>
+							int currentSpeed;<br>
+							int maxNumberPassengers;<br>
+							int numCurrentPassengers;<br>
 						}<br>
 					</aside>
 					<h3>Defining Data Members</h3>
-          <pre><code class='java'>
-	          public class MotorVehicle {
-	          boolean engineOn;
-	          int currentSpeed;
-	          }
-          </code></pre>
+					<pre><code class='java'>
+		public class MotorVehicle {
+		   int currentSpeed;
+		   boolean isEngineRunning;
+		}
+					</code></pre>
 				</section>
 			</section>
 
@@ -231,23 +234,20 @@
 				<section>
 					<h3>Defining a Constructor</h3>
 
-					<p class="copy--small box fragment">A constructor is a special method that is invoked<br/>when you
-						create a new instance of your object.</p>
+					<p class="copy--small box">
+						A <span class="blue">constructor</span> is a <span class="green">special method</span> that is invoked<br/> when you create a new instance of your object.
+					</p>
 
-					<p class="copy--xsmall box fragment">It's common to set default values for your data members in the
-						constructor</p>
-
-					<p class="copy--xsmall box fragment">When you create an Object, you should include at least one
-						constructor. <br/>If you do not, the compiler automatically provides a default one.</p>
+					<p class="copy--small box fragment">It's common to set default values for<br/>your data members in the constructor.</p>
 				</section>
 				<section>
 					<h3>Code It!</h3>
-          <pre><code class='java'>
-	          public MotorVehicle() {
-	          currentSpeed = 0;
-	          engineOn = false;
-	          }
-          </code></pre>
+					<pre><code class='java'>
+		public MotorVehicle() {
+		   currentSpeed = 0;
+		   isEngineRunning = false;
+		}
+					</code></pre>
 				</section>
 			</section>
 
@@ -256,44 +256,46 @@
 				<section>
 					<h3>Defining Methods</h3>
 
-					<p class="copy--small box"><span class="blue">Methods</span> represent the <span class="green">behavior of the Objects</span>.
+					<p class="copy--small box"><span class="blue">Methods</span> represent the <span class="green">behavior of the Object</span>.
 					</p>
 
-					<p class="copy--xsmall fragment box">A method signature includes the method's name plus the number
-						and type of parameters</p>
+					<p class="copy--xsmall fragment box">
+						A <span class="blue">method signature</span> includes the method's name, the return type of the method,<br/>and the number and type of parameters.
+					</p>
 				</section>
 				<section>
-					<aside class='notes'>
-						addPassenger?<br>
-						removePassenger?
-					</aside>
 					<h3>MotorVehicle Methods</h3>
-          <pre><code class='java'>
-	          public void accelerate();
-	          public void decelerate();
-          </code></pre>
+					<pre><code class='java'>
+		public void accelerate() {
+		   // Your code here
+		};
+		public void decelerate(){
+		   // Your code here
+		};
+					</code></pre>
 				</section>
 				<section>
-					<h3>Code It! (Adding Methods)</h3>
+					<h3>Code It!</h3>
 
 					<p class="copy--small box--small">Let's add an accelerate method to our MotorVehicle class: </p>
-          <pre><code class='java'>
-	          public void accelerate() {
-	          currentspeed = currentspeed + 5;
-	          }
-          </code></pre>
+					<pre><code class='java'>
+		public void accelerate() {
+		   // You could also write this as currentSpeed += 5;
+		   currentSpeed = currentSpeed + 5;
+		}
+				</code></pre>
 				</section>
 				<section>
-					<aside class='notes'>
+					<aside class="notes">
 						void decelerate(){<br>
 						currentSpeed = currentSpeed - 5;<br>
 						}<br>
 						<br>
 						switchEngineState() {<br>
-						if(engineOn == true) {<br>
-						engineOn = false;
+						if(isEngineRunning) {<br>
+						isEngineRunning = false;
 						} else { <br>
-						engineOn = true;
+						isEngineRunning = true;
 						}<br>
 						<br>
 						void addPassenger(){<br>
@@ -304,33 +306,35 @@
 						currentNumPassengers--;<br>
 						}
 					</aside>
-					<h3><span class='individually'>Individually</span></h3>
+					<h3>Code It - Individually</h3>
 
-					<p class="copy--small box--small">Add a decelerate method that slows the motor vehicle down in
-						increments of 5.</p>
-
-					<p class="copy--small box--small">Add a method that will swtich the engine's state</p>
-
-					<p class="copy--small box--small"><em>If</em> the engine is on turn the engine off</p>
-
-					<p class="copy--small box--small"><em>else</em> the engine is off so turn the engine on</p>
+					<ol class="list--tall copy--small">
+						<li>Add a <code>decelerate</code> method that slows the motor vehicle down in increments of 5.</li>
+						<li>Add a <code>switchEngineState</code> method that will toggle the engine's state.
+							<ul>
+								<li><em>If</em> the engine is on turn the engine off</li>
+								<li><em>else</em> the engine is off so turn the engine on</li>
+							</ul>
+						</li>
+					</ol>
 				</section>
 				<section>
 					<h3>The Code</h3>
-          <pre><code class='java'>
-	          public void decelerate() {
-	          currentSpeed = currentSpeed - 5;
-	          }
+					<pre><code class='java'>
+	public void decelerate() {
+	   // You could also write this as currentSpeed -= 5;
+	   currentSpeed = currentSpeed - 5;
+	}
 
-	          public void switchEngineState() {
-	          if (engineOn == true) {
-	          engineOn = false;
-	          }
-	          else {
-	          engineOn = true;
-	          }
-	          }
-          </code></pre>
+	public void switchEngineState() {
+	   if (isEngineRunning) {
+	      isEngineRunning = false;
+	   }
+	   else {
+	      isEngineRunning = true;
+	   }
+	}
+				</code></pre>
 				</section>
 			</section>
 
@@ -338,138 +342,112 @@
 			<section>
 				<section>
 					<h3>Objects</h3>
+                    <p class="box">You build an <span class="blue">Object</span> from a <span class="green">class</span> (the blueprint).</p>
 
-					<p class="box">You build an Object from a class</p>
-
-					<p class="box">Objects are instances of your classes</p>
+					<p class="box">Objects are <span class="green">instances of your classes.</span></p>
 				</section>
 				<section>
-					<h3>Objects - Creating </h3>
+					<h3>Creating Objects</h3>
 
 					<p class="copy--small box--small">To create an object:</p>
-          <pre style="height: 80px; overflow: hidden"><code class='java'>
-	          MyObject obj = new MyObject();
-          </code></pre>
-					<p class="copy--small box--small">where <code>new MotorVehicle()</code> is the constructor we just
-						wrote.
+					<pre class="small"><code class='java'>
+		MyObject obj = new MyObject();
+					</code></pre>
+					<p class="copy--small box--small"><code>new MyObject()</code> is calling the class's constructor to initialize the object.
 
-					<p class="copy--small box--small">If the constructor expects parameters<br/>you would include them
-						in this statement: </p>
-          <pre style="height: 120px; overflow: hidden"><code class='java'>
-	          ComplexClass myComplexClass =
-	          new ComplexClass("This constructor takes a string");
-          </code></pre>
+					<p class="copy--small box--small">If the constructor expects parameters,<br/>you would include them in this statement. <em>(More on this later.)</em></p>
+					<pre class="medium"><code class='java'>
+	ComplexClass myComplexClass =
+	   new ComplexClass("This constructor expects a string.");
+					</code></pre>
 				</section>
 				<section>
 					<h3>Code It!</h3>
 
-					<p class="copy--small box--small">Create a MotorVehicle Object</p>
-
-					<p class="copy--small box--small">In the main method of the Tester class, add the following
-						line: </p>
-          <pre><code class='java'>
+					<p class="copy--small box--small">Let's create a <code>MotorVehicle</code> Object.</p>
+					<p class="copy--small box--small">
+						In the <code>main</code> method of the Tester class,<br/>initialize a new <code>MotorVehicle</code> object like so:
+					</p>
+					<pre class="medium"><code class='java'>
 	          MotorVehicle myVehicle = new MotorVehicle();
-          </code></pre>
+					</code></pre>
 				</section>
 				<section>
 					<h3>Using Objects</h3>
 
-					<p class="copy--small box--small">Once you have created your object, you can call its different
-						methods with the following format: </p>
-          <pre style="height: 80px; overflow: hidden"><code class='java'>
-	          nameOfInstance.methodName();
-          </code></pre>
-					<p class="copy--small box--small">Similarly, you can access data members in this format: </p>
-          <pre style="height: 80px; overflow: hidden"><code class='java'>
-	          nameOfInstance.datamember;
-          </code></pre>
+					<p class="copy--small box--small">Once you have created your object, you can call its different methods: </p>
+					<pre class="small"><code class='java'>
+		nameOfInstance.methodName();
+					</code></pre>
+					<p class="copy--small box--small">Similarly, you can access data members using this syntax: </p>
+					<pre class="small"><code class='java'>
+		nameOfInstance.dataMember;
+					</code></pre>
 				</section>
 				<section>
-					<aside class='notes'>
-						MotorVehicle myVehicle = new MotorVehicle();<br>
-						myVehicle.switchEngineState();<br>
-						System.out.println("Engine is On: "+myVehicle.engineOn);<br>
-						System.out.println("Current Speed: "+myVehicle.currentSpeed);<br>
-						myVehicle.accelerate();<br>
-						System.out.println("Current Speed: "+myVehicle.currentSpeed);<br>
-						myVehicle.decelerate();<br>
-						System.out.println("Current Speed: "+myVehicle.currentSpeed);<br>
-						<br>
-						<strong>output:</strong><br>
-						Engine is on: true<br>
-						Current Speed: 0<br>
-						Current Speed: 5<br>
-						Current Speed: 0
-					</aside>
 					<h3>Code It!</h3>
 
 					<p class="copy--small box--small">Now use a method of your motor vehicle class: </p>
 					<ol class="list--tall copy--xsmall">
-						<li>call <code>switchEngineState</code> to turn on the car</li>
-						<li>Print <code>engineOn</code> and confirm it's true</li>
-						<li>Print the <code>currentSpeed</code></li>
-						<li>Accelerate the vehicle</li>
-						<li>Print the new <code>currentSpeed</code></li>
-						<li>Decelerate the vehicle</li>
-						<li>Print the new <code>currentSpeed</code></li>
+						<li>Call <code>switchEngineState</code> to turn on the car.</li>
+						<li>Print <code>isEngineRunning</code> and confirm it's true.</li>
+						<li>Print the <code>currentSpeed</code>.</li>
+						<li>Accelerate the vehicle.</li>
+						<li>Print the new <code>currentSpeed</code>.</li>
+						<li>Decelerate the vehicle.</li>
+						<li>Print the new <code>currentSpeed</code>.</li>
 					</ol>
 				</section>
 				<section>
 					<h3>The Code</h3>
-          <pre><code class='java'>
-	          MotorVehicle myVehicle = new MotorVehicle();
-	          myVehicle.switchEngineState();
-	          System.out.println("Engine is on: " + myVehcile.EngineOn);
-	          System.out.println("Current Speed: " + myVehicle.currentSpeed);
-	          myVehicle.accelerate();
-	          System.out.println("Current Speed: " + myVehicle.currentSpeed);
-	          myVehicle.decelerate();
-	          System.out.println("Current Speed: " + myVehicle.currentSpeed);
-          </code></pre>
+					<pre><code class='java'>
+	MotorVehicle myVehicle = new MotorVehicle();
+	myVehicle.switchEngineState();
+
+	System.out.println("Engine is on: " + myVehicle.isEngineRunning);
+	System.out.println("Current Speed: " + myVehicle.currentSpeed);
+
+	myVehicle.accelerate();
+	System.out.println("Current Speed: " + myVehicle.currentSpeed);
+	myVehicle.decelerate();
+	System.out.println("Current Speed: " + myVehicle.currentSpeed);
+					</code></pre>
 					<p>Output:</p>
-          <pre><code class='no-highlight'>
-	          Engine is on: true
-	          Current Speed: 0
-	          Current Speed: 5
-	          Current Speed: 0
-          </code></pre>
+					<pre class="medium"><code class="no-highlight">
+	Engine is on: true
+	Current Speed: 0
+	Current Speed: 5
+	Current Speed: 0
+					</code></pre>
 				</section>
 				<section>
-					<aside class='notes'>
-						public void printDescription(){<br>
-						System.out.println("I'm a Motor Vehicle and my Engine is on "+engineOn+" and i'm going
-						"+currentSpeed+"mph");<br>
-						}<br>
-					</aside>
-					<h3><span class='individually'>Individually</span></h3>
+					<h3>Code It - Individually</h3>
 
 					<p class="copy--small box--small">Create a method called <code>printDescription</code> that
-						will<br/>print the following statement:</p>
-          <pre><code class='no-highlight'>
-	          I'm a MotorVehicle and my engine is on (true/false) and
-	          I'm currently going (#)mph.
-          </code></pre>
+						will<br/>print the following statement. Print the actual data member values.</p>
+					<pre class="medium"><code class="no-highlight">
+	I'm a MotorVehicle. My engine is running: (true/false), and
+	I'm currently going (#)mph.
+					</code></pre>
 					<p class="copy--small box--small">Test it by calling <code>myVehicle.printDescription();</code></p>
 				</section>
 				<section>
 					<h3>The Code</h3>
-          <pre><code class='java'>
-	          public void printDescription () {
-	          System.out.println("I'm a MotorVehicle and my engine is on " +
-	          engineOn + " and I'm currently going " +
-	          currentSpeed + " mph.");
-	          }
-          </code></pre>
+					<pre><code class='java'>
+	public void printDescription () {
+	   System.out.println("I'm a MotorVehicle. My engine is running " +
+	      isEngineRunning + ", and I'm currently going "
+	      + currentSpeed + " mph.");
+	}
+					</code></pre>
 				</section>
 			</section>
 
-			<!-- QUESTIONS / Break -->
+			<!-- QUESTIONS / BREAK -->
 			<section>
 				<section>
 					<h3>Questions?</h3>
-
 					<p class="box--small">Objects &amp; Classes</p>
-
 					<p class="box--small">Methods, Data Members, &amp; Instances</p>
 				</section>
 				<section>
@@ -477,9 +455,7 @@
 				</section>
 				<section>
 					<h3>Review / Questions?</h3>
-
 					<p class="box--small">Objects &amp; Classes</p>
-
 					<p class="box--small">Methods, Data Members, &amp; Instances</p>
 				</section>
 			</section>
@@ -487,38 +463,38 @@
 			<!-- Data Members -->
 			<section>
 				<section>
-					<aside class='notes'>
-						We've already seen this with the public modifiers on our class declaration and method
-						declaration
+					<aside class="notes">
+						We've already seen this with the public modifiers on our class declaration and method declaration
 					</aside>
-					<h4>Data Members - Access Modifiers</h4>
+					<h3>Data Members -<br/>Access Modifiers</h3>
 
-					<p class="box copy--small">We can make these data members public or private</p>
-
-					<p class="box copy--small">Public members can be accessed by all other classes</p>
-
-					<p class="box copy--small">Private members can only be accessed within its own class</p>
-				</section>
-				<section>
-					<h3>Code It!</h3>
-
-					<p class="copy--small box--small">Mark your data members public and private</p>
-          <pre><code class='java'>
-	          public boolean engineOn;
-	          private int currentSpeed;
-          </code></pre>
+					<p class="box copy--small">We can make data members <span class="blue">public</span> or <span class="blue">private</span>.</p>
+					<p class="box copy--small fragment"><span class="blue">Public</span> members can be <span class="green">accessed by all other classes</span>.</p>
+					<p class="box copy--small fragment"><span class="blue">Private</span> members can <span class="green">only be accessed within its own class</span>.</p>
 				</section>
 				<section>
 					<h3>Accessing Data Members</h3>
 
-					<p class="copy--small box--small">If your fields are declared with the <em>public</em> access
-						modifier you can access the data members directly with the format mentioned before: </p>
-          <pre><code class='java'>
-	          instanceOfObject.fieldName
-          </code></pre>
+					<p class="copy--small box--small">
+						If your data members are declared with the <span class="blue">public</span> access
+						modifier you can access them directly with the syntax mentioned previously:
+					</p>
+					<pre class="medium"><code class='java'>
+		instanceOfObject.fieldName
+					</code></pre>
 				</section>
 				<section>
-					<aside class='notes'>
+					<h3>Code It!</h3>
+
+					<p class="copy--small box--small">Make your data members public and private, then run your code.</p>
+					<pre class="medium"><code class='java'>
+	          public boolean isEngineRunning;
+	          private int currentSpeed;
+					</code></pre>
+				</section>
+
+				<section>
+					<aside class="notes">
 						The field MotorVehicle.currentSpeed is not visible<br>
 						b/c currentSpeed is now private<br>
 						b/c it's public
@@ -526,10 +502,8 @@
 					<h3>Oops!</h3>
 
 					<p class="copy--small box">What is the error we received?</p>
-
 					<p class="copy--small box">Why did we receive it?</p>
-
-					<p class="copy--small box">Why is <code>myVehicle.engineOn</code> not throwing the same error?</p>
+					<p class="copy--small box">Why is <code>myVehicle.isEngineRunning</code> not throwing the same error?</p>
 				</section>
 			</section>
 
@@ -538,96 +512,105 @@
 				<section>
 					<h3>Data Encapsulation</h3>
 
-					<p class="copy--small box">With OOP, we have the concept of <strong>data encapsulation</strong>
-						which discourages the direct, public access to a class's data members.</p>
+					<p class="copy--small box">
+						With OOP, we have the concept of <span class="blue"><strong>data encapsulation</strong></span>
+						which <span class="green">discourages the direct, public access to a class's data members</span>.
+					</p>
 				</section>
 				<section>
 					<h3>Data Encapsulation</h3>
 
-					<p class="copy--small box"><strong>Data Encapsulation</strong> is to hide or restrict direct
-						access<br/>to an object's members</p>
+					<p class="copy--small box">
+						<span class="blue"><strong>Data Encapsulation</strong></span>: to hide or restrict direct
+						access<br/>to an object's members.
+					</p>
 
-					<p class="copy--xsmall box">Instead of direct access a set of accessor and modifier methods<br/>are
-						used to interact with the data.</p>
+					<p class="copy--xsmall box">
+						Instead of direct access a set of accessor and modifier methods<br/>
+						are used to interact with the data.
+					</p>
 				</section>
 				<section>
 					<h3>Benefits</h3>
 					<ol class="list--tall box--small copy--small">
-						<li>Control to make fields read-only and write-only</li>
-						<li>Classes can have absolute control over what is stored in the field</li>
+						<li>Control to make fields read-only and write-only.</li>
+						<li>Classes can have absolute control over what is stored in the field.</li>
 						<li>Provides a layer of abstraction. Users of the class (other code or objects) do not need to
-							know the details of the data storage
+							know the details of the data storage.
 						</li>
 					</ol>
 				</section>
 				<section>
-					<aside class='notes'>
+					<aside class="notes">
 						Change from public to private:<br>
-						private boolean engineOn;
+						private boolean isEngineRunning;
 					</aside>
-					<h3>Encapsulating our Data</h3>
+					<h3>Encapsulating Our Data</h3>
 
-					<p class="copy--small box--small">Let's make all our data members private</p>
+					<p class="copy--small box--small">Let's make all our data members private.</p>
 
-					<p class="copy--small box--small">Now we'll need to add accessor methods<br/>so we can still access
-						the data</p>
+					<p class="copy--small box--small">Now we need to add <span class="blue">accessor methods</span><br/>so we can still access
+						the data.</p>
+					<p class="copy--xsmall box--small">These are commonly called "getters" and "setters" in Java.</p>
 				</section>
 				<section>
-					<aside class='notes'>
-						public boolean getEngineOn(){<br>
-						return engineOn;<br>
+					<aside class="notes">
+						public boolean getIsEngineRunning(){<br>
+						return isEngineRunning;<br>
 						}<br>
 					</aside>
 					<h3>Code It!</h3>
 
 					<p class="copy--small box--small">Add an accessor method to get the current speed: </p>
-          <pre><code class='java'>
-	          public int getCurrentSpeed() {
-	          return currentSpeed;
-	          }
-          </code></pre>
-					<p class="copy--small box--small"><span class='individually'>On your own,</span> add an accessor
-						method for the boolean <code>engineOn</code></p>
+					<pre class="medium"><code class='java'>
+	public int getCurrentSpeed() {
+	   return currentSpeed;
+	}
+					</code></pre>
+					<p class="copy--small box--small">On your own, add an accessor method for the boolean <code>isEngineRunning</code>.</p>
 				</section>
 				<section>
-          <pre><code class='java'>
-	          public boolean getEngineOn() {
-	          return engineOn;
-	          }
-          </code></pre>
+					<pre><code class='java'>
+	public boolean getIsEngineRunning() {
+	   return isEngineRunning;
+	}
+					</code></pre>
 				</section>
 				<section>
-					<aside class='notes'>
-						System.out.println("Engine is On: "+myVehicle.getEngineOn());<br>
+					<aside class="notes">
+						System.out.println("Engine is On: "+myVehicle.getIsEngineRunning());<br>
 						System.out.println("Current Speed: "+myVehicle.getCurrentSpeed());<br>
 						myVehicle.accelerate();<br>
 						System.out.println("Current Speed: "+myVehicle.getCurrentSpeed());<br>
 						myVehicle.decelerate();<br>
 						System.out.println("Current Speed: "+myVehicle.getCurrentSpeed());<br>
 					</aside>
-					<h3>Update our Code</h3>
+					<h3>Update Our Code</h3>
 
-					<p class="copy--small box--small">Now instead of calling on your data members directly, use the
-						accessor methods we just created to get their values.</p>
-          <pre><code class='java'>
-	          System.out.println("Current Speed: " + myVehicle.getCurrentSpeed());
-          </code></pre>
+					<p class="copy--small box--small">
+						Now instead of calling on your data members directly, use the accessor methods we just created
+						to get their values.
+					</p>
+					<pre><code class='java'>
+	System.out.println("Current Speed: " + myVehicle.getCurrentSpeed());
+					</code></pre>
 				</section>
 			</section>
 
+			<!-- TODO: STOPPED FORMATTING HERE. -->
 			<!-- Static -->
 			<section>
 				<section>
-					<h3>Static vs Instance</h3>
+					<h3>Static vs. Instance</h3>
 
 					<p class="copy--small box">When a method is declared static,<br/>it is <strong>shared</strong> by
 						all instances of the class.</p>
 
-					<p class="copy--small box">In contrast, the type of methods we've been using<br/>have been <strong>unique</strong>
-						to each instance.</p>
+					<p class="copy--small box">In contrast, the type of methods we've been using<br/>
+						have been <strong>unique</strong> to each instance.</p>
 				</section>
 				<section>
-					<aside class='notes'>
+					<aside class="notes">
 						The constructor
 					</aside>
 					<h3>Static: An Example</h3>
@@ -649,7 +632,7 @@
           <pre><code class='java'>
 	          public MotorVehicle() {
 	          currentSpeed = 0;
-	          engineOn = false;
+	          isEngineRunning = false;
 	          countCreated++;
 	          }
           </code></pre>
@@ -657,18 +640,15 @@
 				<section>
 					<h3>Add an Accessor</h3>
 
-					<p class="copy--small box--small">We can create a <em>static</em> accessor method to return the
-						<code>countCreated</code>.</p>
+					<p class="copy--small box--small">We can create a <em>static</em> accessor method to return the <code>countCreated</code>.</p>
 
-					<p class="copy--small box--small">Since this method belongs to the <em>class</em> and not an
-						instance of the class, we call the method on the MotorVehicle class</p>
+					<p class="copy--small box--small">Since this method belongs to the <em>class</em> and not an instance of the class, we call the method on the MotorVehicle class</p>
           <pre><code class='java'>
 	          public static int getCountCreated() {
 	          return countCreated;
 	          }
           </code></pre>
-					<p class="copy--small box--small"><span class='individually'>On your own,</span> print the
-						countCreated</p>
+					<p class="copy--small box--small">On your own, print the countCreated</p>
 				</section>
 				<section>
 					<h3>The Code</h3>
@@ -678,7 +658,7 @@
           </code></pre>
 				</section>
 				<section>
-					<aside class='notes'>
+					<aside class="notes">
 						Note that they are the same because they are referencing the same data member
 					</aside>
 					<h3>Testing our Static Data Member</h3>
@@ -781,7 +761,7 @@
           </code></pre>
 				</section>
 				<section>
-					<aside class='notes'>
+					<aside class="notes">
 						public Car(){<br>
 						super();<br>
 						}
@@ -805,7 +785,7 @@
 			<!-- More subclass -->
 			<section>
 				<section>
-					<aside class='notes'>
+					<aside class="notes">
 						For instance, while a motor boat doesn't necessarily have a door or a trunk all cars do
 					</aside>
 					<h4>What else can you do with a subclass?</h4>
@@ -814,7 +794,7 @@
 						class.</p>
 				</section>
 				<section>
-					<aside class='notes'>
+					<aside class="notes">
 						public class Car extends MotorVehicle {<br>
 						<strong>private boolean trunkOpen;<br>
 							private int numDoors;</strong><br>
@@ -843,7 +823,7 @@
           </code></pre>
 				</section>
 				<section>
-					<aside class='notes'>
+					<aside class="notes">
 						public Car() {<br>
 						super();<br>
 						<strong>trunkOpen = false;<br>
@@ -873,7 +853,7 @@
           </code></pre>
 				</section>
 				<section>
-					<aside class='notes'>
+					<aside class="notes">
 						Car myCar = new Car();<br>
 						myCar.switchEngineState();<br>
 						System.out.println(myCar.getCurrentSpeed());<br>
@@ -887,7 +867,7 @@
 					<p class="copy--small box--small">In your HelloWorld class:</p>
 					<ol class="list--tall copy--small box--small">
 						<li>Create a car "myCar"</li>
-						<li>Turn the <code>engineOn</code></li>
+						<li>Turn the <code>isEngineRunning</code></li>
 						<li>Print the car's current speed</li>
 						<li>Accelerate the car</li>
 						<li>Print the car's new current speed</li>
@@ -896,7 +876,7 @@
 					</ol>
 				</section>
 				<section>
-					<aside class='notes'>
+					<aside class="notes">
 						Highlight that we now have 3 motor vehicles<br>
 						Trace through calling the parent's constructor and methods<br>
 						Car must be rolling down the street...someone forgot the emergency break
@@ -913,7 +893,7 @@
 	          MotorVehicle.getCountCreated());
           </code></pre>
 					<p>Output:</p>
-          <pre><code class='no-highlight'>
+          <pre><code class="no-highlight">
 	          0
 	          5
 	          I'm a Motor Vehicle and my Engine is on true and I'm going 5 mph
@@ -921,7 +901,7 @@
           </code></pre>
 				</section>
 				<section>
-					<h3><span class='individually'>Individually</span></h3>
+					<h3>Individually</h3>
 
 					<p class="copy--small box--small">Add accessor methods for:</p>
 					<ol class="list--tall copy--xsmall">
@@ -951,7 +931,7 @@
 			<!-- Overrides -->
 			<section>
 				<section>
-					<aside class='notes'>
+					<aside class="notes">
 						Optionally have the @Override notation<br>
 						Potentially useful since it shows up in all my android projects a # of times..
 					</aside>
@@ -973,7 +953,7 @@
 					</ol>
 				</section>
 				<section>
-					<aside class='notes'>
+					<aside class="notes">
 						If we comment out the printDescription() code in Car, the code calls the printDescription() of
 						the parent class<br>
 						uncomment and it uses the car<br>
@@ -982,7 +962,7 @@
 					<h3>Overriding Methods Cont.</h3>
 
 					<p class="copy--small box--small">The output of <code>myCar.printDescription()</code> now says: </p>
-          <pre><code class='no-highlight'>
+          <pre><code class="no-highlight">
 	          I'm a car! I have 4 doors!
           </code></pre>
 				</section>
@@ -1048,7 +1028,7 @@
 
 			<section>
 				<section>
-					<aside class='notes'>
+					<aside class="notes">
 						Protected is also accessed by classes in the same package
 					</aside>
 					<h3>Fields</h3>
@@ -1074,7 +1054,7 @@
           </code></pre>
 				</section>
 				<section>
-					<h3><span class='individually'>Individually</span></h3>
+					<h3>Individually</h3>
 
 					<p class="copy--small box">Overload the decelerate method in the same fashion</p>
 				</section>
@@ -1089,7 +1069,7 @@
 			</section>
 
 			<section>
-				<aside class='notes'>
+				<aside class="notes">
 					Polymorphism can be a bit of an advanced topic since it's really covers a lot of ground with various
 					types<br>
 					We want to mention it so they can say "ooooh yeah I've heard of that" not much to do with it in java
@@ -1115,7 +1095,7 @@
 						(if not abstract themselves) could be instantiated</p>
 				</section>
 				<section>
-					<aside class='notes'>
+					<aside class="notes">
 						No<br>
 						You have cars<br>
 						Trucks<br>
@@ -1151,7 +1131,7 @@
 					</ol>
 				</section>
 				<section>
-					<aside class='notes'>
+					<aside class="notes">
 						Flexibility -- MotorVehicle could be used as a parameter in methods and any MotorVehicle
 						(regardless of subtype) could be passed when declared like this<br>
 						<br>
@@ -1169,7 +1149,7 @@
 			</section>
 
 			<section>
-				<aside class='notes'>
+				<aside class="notes">
 					Hiding really only matters if you used the parent class type when declaring a new instace of a
 					subclass<br>
 					i.e.<br>
@@ -1185,14 +1165,13 @@
 					  </section>
 					  <section>
 				  -->
-				<aside class='notes'>
+				<aside class="notes">
 					Give them plenty of time to play around with creating their own subclass<br>
 					Encourage them to use the concepts discussed
 				</aside>
 				<h3>Code It!</h3>
 
-				<p class="copy--small box--small"><span class='individually'>On your own,</span> create a Bus that
-					extends MotorVehicle</p>
+				<p class="copy--small box--small">On your own, create a Bus that extends MotorVehicle.</p>
 
 				<p class="copy--small box--small">Additional Bus specific Methods to include: </p>
 				<ol class="copy--xsmall list--tall">
@@ -1203,7 +1182,7 @@
 
 
 			<section>
-				<aside class='notes'>
+				<aside class="notes">
 					Circle back to our initial discussion on what it takes to be a motor vehicle and relate that to our
 					motorvehicle<br>
 					ALSO -- how will other people interact with our class? An interface could tell them
