@@ -409,6 +409,7 @@
 
 			<section>
 				<section>
+					<!-- TODO: Clarify STATES AND BEHAVIORS -->
 					<h3>Part 2: <span class="blue">Introduction to Objects</span></h3>
 
 					<p class="box copy--small">All real-world objects have a <em>state</em> and a <em>behavior</em>.</p>
@@ -497,8 +498,7 @@
 					<p class="box copy--small">An object's <span class="blue">behavior</span> is defined in its
 						<span class="green">methods</span>.</p>
 
-					<p class="box copy--small">A method is a <strong>block of code that will execute when called
-						upon</strong>.</p>
+					<p class="box copy--small">A method is a <strong>block of code that will execute when called upon</strong>.</p>
 				</section>
 				<section>
 					<h3>String Methods (behaviors)</h3>
@@ -547,8 +547,7 @@
 				<section>
 					<h3>Methods: Return Type</h3>
 
-					<p class="box copy--small"><strong>Return Type</strong> - If the method returns a value, what type
-						is it?</p>
+					<p class="box copy--small"><strong>Return Type</strong> - If the method returns a value, what type is it?</p>
 
 					<p class="box copy--small">Let's consider the
 						<a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html#length()" target="_blank">length()
@@ -565,82 +564,111 @@
 				</section>
 			</section>
 
-      <!-- Wrapper Classes -->
-      <section>
-        <section>
-          <h3>Wrapper Classes</h3>
-          <p class="box copy--small">For each of the <em>primitive data types</em> we've seen,<br/>there is a <span class="green">wrapper class</span>.</p>
-          <p class="box fragment copy--small">A wrapper class <span class="yellow">wraps the primitive in an object</span>.</p>
-          <p class="box fragment copy--xsmall">They have the <strong>same names</strong> as the primitive types.<br/> They're full words and start with a capital letter: Integer, Double, Boolean</p>
-        </section>
-        <section>
-          <h3>Wrapper Classes</h3>
-          <p class="box copy--small">Reasons to use a number object vs. a primitive:</p>
-          <ol class="list--tall copy--small">
-            <li class="fragment">A method expects an object</li>
-            <li class="fragment">Using a constant defined by the Number class</li>
-            <li class="fragment">Use of the Number class methods (converting to/from types or Strings and between number systems)</li>
-            <!-- TODO clear up the wording here, not a very readable slide -->
-          </ol>
-        </section>
-        <section>
-          <h4>Let's create some Number Objects</h4>
-          <p class="box--small copy--small">We can create a Double by passing it a primitive double value: </p>
-          <pre><code class='java'>
+			<!-- Wrapper Classes -->
+			<section>
+				<section>
+					<h3>Wrapper Classes</h3>
+
+					<p class="box copy--small">
+						For each of the <em>primitive data types</em> we've seen,<br/>there is a <span class="green">wrapper class</span>.
+					</p>
+
+					<p class="box fragment copy--small">A wrapper class <span class="yellow">wraps the primitive in an object</span>.</p>
+
+					<p class="box fragment copy--xsmall">
+						They have the <strong>same names</strong> as the primitive types.<br/> They're full words and start with a capital letter: Integer, Double, Boolean
+					</p>
+				</section>
+				<section>
+					<h3>Wrapper Classes</h3>
+
+					<p class="box copy--small">Reasons to use a number object vs. a primitive:</p>
+					<ol class="list--tall copy--small">
+						<li class="fragment">A method expects an object</li>
+						<li class="fragment">Using a constant defined by the Number class</li>
+						<li class="fragment">Use of the Number class methods (converting to/from types or Strings and between number systems)
+						</li>
+						<!-- TODO clear up the wording here, not a very readable slide -->
+					</ol>
+				</section>
+				<section>
+					<h4>Let's create some Number Objects</h4>
+
+					<p class="box--small copy--small">We can create a Double by passing it a primitive double value: </p>
+                    <pre style="height: 150px; overflow: hidden"><code class='java'>
           Double mpg = new Double(30.5);
-          </code></pre>
-          <p class="box--small copy--small">We can also create a Double by passing it a String: </p>
-          <pre><code class='java'>
+					</code></pre>
+					<p class="box--small copy--small">We can also create a Double by passing it a String: </p>
+					<pre style="height: 150px; overflow: hidden"><code class='java'>
           Double mpg = new Double("49.1");
-          </code></pre>
-        </section>
-      </section>
+					</code></pre>
+				</section>
+			</section>
 
-      <!-- Constructors -->
-      <section>
-        <aside class='notes'>
-          Take a look at the constructor summary in the Java Docs
-        </aside>
-        <h3>Constructors</h3>
-        <p class="box--small copy--small">When we create an object, its data members have an initial value.</p>
-        <p class="box--small copy--small">The <span class="blue">initial state of the object</span> is set by its <span class="green">constructor</span>.</p>
-        <p class="box--small copy--small">A constructor may take one or more parameters<br/>to be used when setting the initial values.</p>
-        <p class="box copy--xsmall">Check out <a href="http://docs.oracle.com/javase/1.4.2/docs/api/java/lang/Double.html" target="_blank">Double</a>
-      </section>
+			<!-- TODO: Constructors are confusing at this point in class. Consider removing this section, since it's addressed in CLASS 3 objects. -->
+			<!-- Constructors -->
+			<section>
+				<aside class='notes'>
+					Take a look at the constructor summary in the Java Docs
+				</aside>
+				<h3>Constructors</h3>
 
-      <!-- Double -->
-      <section>
-        <h4>Double -> String &amp; String -> Double</h4>
-        <p class="box copy--small">Doubles can be converted to a String with the <a href="http://docs.oracle.com/javase/1.4.2/docs/api/java/lang/Double.html#toString()" target="_blank">toString()</a> method.</p>
-        <p class="box copy--small">Meanwhile, we can get a primitive double value by calling on <a href="http://docs.oracle.com/javase/1.4.2/docs/api/java/lang/Double.html#parseDouble(java.lang.String)" target="_blank">Double.parseDouble(double x);</a></p>
-      </section>
+				<p class="box--small copy--small">When we create an object, its data members have an initial value.</p>
 
-      <!-- Null -->
-      <section>
-        <h3>Null</h3>
-        <p class="box copy--small">A value that represents nothingness</p>
-        <p class="box copy--small">Null represents no value</p>
-        <p class="box copy--xsmall">If a boolean can be yes or no, a null value would signify "undecided"</p>
-      </section>
+				<p class="box--small copy--small">The <span class="blue">initial state of the object</span> is set by its <span class="green">constructor</span>.</p>
 
-      <section>
-        <section>
-          <h3>Questions?</h3>
-          <p class="box--small">Object Oriented Programming</p>
-        </section>
+				<p class="box--small copy--small">A constructor may take one or more parameters<br/>to be used when setting the initial values.</p>
 
-        <section>
-          <h3>Review / Questions?</h3>
-          <p class="box--small">Variables &amp; Operators</p>
-          <p class="box--small">Flow Control Constructs</p>
-          <p class="box--small">Object Oriented Programming</p>
-        </section>
-      </section>
+				<p class="box copy--xsmall">Check out
+					<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" target="_blank">Double</a>.
+				</p>
+			</section>
+
+			<!-- Double -->
+			<section>
+				<h4>Converting from<br/>Double to String <br/> &amp; String to Double</h4>
+
+				<p class="box copy--small">
+					Doubles can be converted to a String with the
+					<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html#toString--" target="_blank">toString()</a> method.
+				</p>
+
+				<p class="box copy--small">
+					Meanwhile, we can get a primitive double value by calling on
+					<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html#parseDouble-java.lang.String-" target="_blank">Double.parseDouble(double x);</a>
+				</p>
+			</section>
+
+			<!-- TODO: NULL is in such a random place. Move it somewhere logical. -->
+			<!-- Null -->
+			<section>
+				<h3>Null</h3>
+
+				<p class="box copy--small">A value that represents nothingness.</p>
+				<p class="box copy--small">Null represents <span class="blue">no value.</span></p>
+				<p class="box copy--xsmall">Null is not true and not false. It has no value.</p>
+			</section>
+
+			<section>
+				<section>
+					<h3>Questions?</h3>
+
+					<p class="box--small">Object Oriented Programming</p>
+				</section>
+
+				<section>
+					<h3>Review / Questions?</h3>
+
+					<p class="box--small">Variables &amp; Operators</p>
+					<p class="box--small">Flow Control Constructs</p>
+					<p class="box--small">Object Oriented Programming</p>
+				</section>
+			</section>
 			<section>
 				<!-- Event Outro -->
 				<section>
-					<h3>END OF DAY 1</h3>
-					<img src="images/gdi_logo_badge.png" class="img--bare" height="400px"/>
+					<h3>END OF CLASS 2</h3>
+					<img src="images/gdi_logo_badge.png" class="img--bare"/>
 
 					<div class="box--small">
 
@@ -650,15 +678,17 @@
 						</h3>
 						<p>
 							<small>
-								<a href="http://gdiindy.github.io" target="_blank" title="GDI Indianapolis">GDI Indianapolis</a> &nbsp; | &nbsp;
-								<a href="https://twitter.com/gdiIndy" target="_blank" title="GDI Indy on Twitter">@gdiindy</a> &nbsp; | &nbsp;
+								<a href="http://gdiindy.github.io" target="_blank" title="GDI Indianapolis">GDI
+									Indianapolis</a> &nbsp; | &nbsp;
+								<a href="https://twitter.com/gdiIndy" target="_blank" title="GDI Indy on Twitter">@gdiindy</a>
+								&nbsp; | &nbsp;
 								#IntroToJava
 							</small>
 						</p>
 					</div>
 				</section>
 			</section>
-    </div>
+		</div>
 
 		<footer>
 			<div class="copyright">
