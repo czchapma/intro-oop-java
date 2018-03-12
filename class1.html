@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<!-- MODIFIED FROM GDI INDIANAPOLIS: https://github.com/gdiindy/intro-oop-java -->
+	<!-- WHICH WAS MODIFIED FROM GDI ANN ARBOR: https://github.com/gdiannarbor/intro-oop-java -->
 
-	<!-- MODIFIED FROM GDI ANN ARBOR: https://github.com/gdiannarbor/intro-oop-java -->
-
-	<title>Introduction to Java and OOP Concepts | Girl Develop It Indianapolis</title>
+	<title>Introduction to Java and OOP Concepts | Girl Develop It Boston</title>
 
 	<meta name="description" content="Intro to Object Oriented Programming with Java curriculum was developed by Ashley
-	Price for Girl Develop It, and modified by Christy Lewis. The modified course is meant to be taught in 4 2-hour sections.
+	Price for Girl Develop It, and modified by Christine Chapman and Christy Lewis. The modified course is meant to be taught in 4 2-hour sections.
 	The slides are customizable according to the needs of a given class or audience.">
 	<meta name="author" content="Ashley Price">
 
@@ -35,34 +35,28 @@
 
 			<!-- Event Intro -->
 			<section>
-				<h3>CLASS 1</h3>
 				<img src="images/gdi_logo_badge.png" class="img--bare"/>
 
 				<div class="box--small">
 					<h3>
 						<span class="green">Intro to Java</span><br/>
-						<small><span class="blue">& Object Oriented Programming</span></small>
 					</h3>
 					<p>
 						<small>
-							<a href="http://gdiindy.github.io" target="_blank" title="GDI Indianapolis">GDI Indianapolis</a> &nbsp; | &nbsp;
-							<a href="https://twitter.com/gdiIndy" target="_blank" title="GDI Indy on Twitter">@gdiindy</a> &nbsp; | &nbsp;
+							<a href="https://www.girldevelopit.com/chapters/boston" target="_blank" title="GDI Boston">GDI Boston</a> &nbsp; | &nbsp;
+							<a href="https://twitter.com/gdiboston" target="_blank" title="GDI Boston on Twitter">@gdiboston</a> &nbsp; | &nbsp;
 							#IntroToJava
 						</small>
 					</p>
+					<h4>Download Intelij and connect to Guest Wifi</h4>
 					<aside class="notes">
 					</aside>
 				</div>
 			</section>
 
-			<!-- Welcome to GDI Indy -->
-			<section>
+			<!-- Welcome to GDI Boston -->
 				<section>
-					<h3>Welcome to GDI Indy!</h3>
-					<p>
-						The Girl Develop It Indianapolis chapter is here to provide affordable and accessible programs
-						to learn software through mentorship and hands-on instruction.
-					</p>
+					<h3>Welcome to GDI Boston!</h3>
 					<h4 class="blue box--small" style="margin-bottom: .5em;">Some "Rules"</h4>
 					<ul>
 						<li>We are here for you!</li>
@@ -73,13 +67,24 @@
 
 				</section>
 				<section>
+					<h3>Logistics</h3>
+					<br/><br/>
+					<ul>
+						<li>Slides at christinezchapman.com/java</li>
+						<li>Guest Wifi password is on whiteboard</li>
+						<li>Class format</li>
+					</ul>
+
+				</section>
+				<section>
 					<h4 class="blue box--small" style="margin-bottom: .5em;">
 						INTRODUCTIONS
 					</h4>
-					<h3>Tell us about yourself<br/>and what you hope to get<br/>out of this class.</h3>
-
+					<ul>
+						<li>Name, Company, Role</li>
+						<li>Any prior programming experience?</li>
+						<li>What do you hope to get out of this class?</li>
 				</section>
-			</section>
 
 			<!-- Creating a new project -->
 			<section>
@@ -92,46 +97,8 @@
 				</section>
 				<section>
 					<h3>Creating a New Java Project</h3>
-					<ol class="box--small list--tall">
-						<li>
-							In Eclipse, create a new folder for your workspace, and click OK.
-						</li>
-						<li>
-							Create a new project by selecting File > New > Project..., then select Java Project.
-						</li>
-						<li>Enter Intro to Java (or whatever you want) as your project name</li>
-						<li>
-							Choose JavaSE-1.8 as your JRE.
-						</li>
-						<li>
-							Hit finish. Switch to the Java perspective if prompted.
-						</li>
-					</ol>
+						<img src="images/intelij.png"/>
 				</section>
-				<section>
-					<h3> Adding Our First Class</h3>
-					<ol class="list--tall box--small">
-						<li>Expand your project.</li>
-						<li>Right click on your src folder.</li>
-						<li>New > Class</li>
-						<li>Enter 'HelloWorld' as your class name (no spaces!)</li>
-						<li>Click finish.</li>
-					</ol>
-				</section>
-				<section>
-					<h3>Default Code</h3>
-                        <pre><code class='java'>
-	public class HelloWorld {
-	   /**
-	   * @param args
-	   */
-	   public static void main(String[] args) {
-		   // Write your first java program here!
-	   }
-	}
-                    </code></pre>
-				</section>
-
 				<section>
 					<aside class='notes'>
             public static void main(String[] args) {<br>
@@ -141,9 +108,9 @@
 					<h3>Writing our first line </h3>
 					<ol class="list--tall copy--small box--small">
 						<li>Inside the main method type:
-							<pre style="height: 30px; overflow: hidden"><code class='java'>System.out.println("Hello, GDI Indy!");</code></pre>
+							<pre style="height: 30px; overflow: hidden"><code class='java'>System.out.println("Hello, GDI Boston!");</code></pre>
 						</li>
-						<li>Tap the play button in the upper left corner.</li>
+						<li>Tap the play button in the upper right corner.</li>
 						<li>Woo!</li>
 					</ol>
 				</section>
@@ -156,7 +123,7 @@
             */
             public static void main(String[] args) {
               // Write your first java program here!
-              System.out.println("Hello, GDI Indy!");
+              System.out.println("Hello, GDI Boston!");
             }
           }
 	                </code></pre>
@@ -205,190 +172,51 @@
 	                </code></pre>
 				</section>
 			</section>
+			<section>
+				<h3>Let's Develop It</h3>
+				<p><a href="https://docs.google.com/document/d/1P5lgdb_xZm1uStXfKv0vbTJN9ax0EmQDzDXHd5fnsf4/edit?usp=sharing" target="_blank">
+					Assignment 1
+				</a></p>
+			</section>
 
 
 			<!-- PART 1 : Language Fundamentals -->
 			<section>
-				<h3>Part 1: <span class="blue">Language Fundamentals</span></h3>
-				<ul class="list--tall box--small">
-					<li>Variables</li>
-					<li>Operators</li>
-					<li>Expressions &amp; Statements</li>
-					<li>Flow Control (Blocks)</li>
-					<li>Exceptions</li>
-				</ul>
+				<h3><span class="blue">Language Fundamentals</span></h3>
 			</section>
 
 			<!-- Part 1 : Variables -->
-			<section>
 				<section>
-					<h3>Variables</h3>
-
-					<p class="box--small">What are variables?</p>
-
-					<p class="box--small fragment">Java is a <span class="blue">statically typed</span> language.</p>
-
-					<p class="box--small fragment">You must <span class="green">declare all variables before you use them</span>.<br/>
-						<small>The declaration must include the variable type and the variable name.</small>
-					</p>
-					<p class="box--small fragment">You can't change the type of a variable<br/>after you declare it.</p>
-				</section>
-				<section>
-					<h4>Statically Typed Variables Illustrated</h4>
-
-					<p class="box copy--small">
-						You can think of <span class="blue">variables</span> as little boxes that <span class="green">hold a value</span>.
-					</p>
-
-					<p class="box--small copy--small fragment">In <span class="yellow">strongly typed</span> langauges,
-						variables only hold the "kind of value" they were declared	to:<br/><br/><img src="images/variables_illustrated.png">
-					</p>
-				</section>
-				<section>
-					<aside class='notes'>
-						There are 8 total, but these are three we care about at the moment
-					</aside>
 					<h3>Primitive Variables</h3>
-
-					<p class="box copy--small">
-						A <span class="green">primitive</span> variable is the most basic type of value in a language.
-					</p>
-
-					<p class="box copy--small">Primitive types we'll be looking at include: </p>
-					<ul>
-						<li>int</li>
-						<li>double</li>
-						<li>boolean</li>
-					</ul>
+	                    <pre><code class='java'>
+public static void main(String[] args) {
+	boolean hasClassStarted = true;
+	int numStudents = 5;
+	double costOfSubwayRide = 2.25;
+}
+		                </code></pre>
 				</section>
 				<section>
-					<aside class='notes'>
-            public static void main(String[] args) {<br>
-              System.out.println("Hello World");<br>
-              <strong>
-                int numberPassengers;<br>
-                int maxNumberPassengers;<br>
-                boolean isFull;<br>
-              </strong>
-            }
-					</aside>
-					<h3>Code It: Creating Variables</h3>
-
-					<p class="box copy--small">Declare a variable with the following format: </p>
-					<pre style="height: 30px; overflow: hidden"><code class='java'>type name;</code></pre>
-					<div class="box copy--small">
-						<p>We're going to create the following three variables: </p>
-						<ul>
-							<li><code>int numberPassengers</code></li>
-							<li><code>int maxNumberPassengers</code></li>
-							<li><code>boolean isFull</code></li>
-						</ul>
-					</div>
+					<h3>Statically-Typed Variables</h3>
+					<br/>
+					<img src="images/variables_illustrated.png"/>
 				</section>
 				<section>
-					<h3>The Code</h3>
+					<h3>Mutable Variables</h3>
                     <pre><code class='java'>
-            public static void main(String[] args) {
-              System.out.println("Hello World!");
-              int numberPassengers;
-              int maxNumberPassengers;
-              boolean isFull;
-            }
+public static void main(String[] args) {
+	boolean hasClassStarted = true;
+	hasClassStarted = false;
+
+	int numStudents = 5;
+	numStudents = numStudents + 1;
+
+	double costOfSubwayRide = 2.25;
+	costOfSubwayRide = 2.75;
+}
 	                </code></pre>
 				</section>
 			</section>
-
-			<!-- Part 1 : Assignment Operators -->
-			<section>
-				<section>
-					<h3>Operators</h3>
-					<ul class="list--tall box--small">
-						<li>Assignment</li>
-						<li>Arithmetic</li>
-						<li>Equality and Relationship</li>
-						<li>Conditional</li>
-						<li>Precedence</li>
-					</ul>
-				</section>
-
-				<section>
-					<aside class='notes'>
-            public static void main(String[] args) {<br>
-              System.out.println("Hello World");<br>
-              int numberPassengers;<br>
-              int maxNumberPassengers;<br>
-              boolean isFull;<br>
-              <strong>numberPassengers=1;</strong><br>
-            }<br>
-            "Variable Name" "Operator" "Value"
-					</aside>
-					<h3>Assignment Operators</h3>
-
-					<p class="box copy--small">
-						To assign a value to a variable we use the assignment operator:	<code>=</code>
-					</p>
-
-					<p class="box--small copy--small">Let's try it out: </p>
-					<pre><code class='java'>numberPassengers = 1;</code></pre>
-				</section>
-				<section>
-					<aside class='notes'>
-            public static void main(String[] args) {<br>
-              System.out.println("Hello, World!");<br>
-              int numberPassengers;<br>
-              <strong>int maxNumberPassengers=2;</strong><br>
-              boolean isFull;<br>
-              numberPassengers=1;<br>
-            }
-					</aside>
-					<h3>Initialization</h3>
-
-					<p class="box copy--small">We just <em>initialized</em> <code>numberPassengers</code></p>
-
-					<p class="box--small copy--small">Initialization is the first (<em>initial</em>) assignment of a value to a variable</p>
-
-					<p class="box--small copy--xsmall">You should always initialize your variables before using them in your program</p>
-				</section>
-				<section>
-					<p class="copy--small">You can initialize your variables when you declare them: </p>
-					<pre><code class='java'>int maxNumberPassengers = 2</code></pre>
-				</section>
-				<section>
-					<aside class='notes'>
-            public static void main(String[] args) {<br>
-              System.out.println("Hello World");<br>
-              int numberPassengers;<br>
-              int maxNumberPassengers=2;<br>
-              <strong>boolean isFull=false;</strong><br>
-              numberPassengers=1;<br>
-            }
-					</aside>
-					<h3>Code it!</h3>
-
-					<p class="box--small copy--small">Boolean variables have two values:</p>
-					<ul class="box--small copy--small list--tall">
-						<li>true</li>
-						<li>false</li>
-					</ul>
-					<p class="box--small copy--small">
-						On your own, initialize the variable <code>isFull</code> with the value <code>false</code>
-					</p>
-				</section>
-				<section>
-					<h3>The Code: </h3>
-                        <pre><code class='java'>
-          public static void main(String[] args) {
-            int numberPassengers;
-            int maxNumberPassengers = 2;
-            boolean isFull = false;
-            numberPassengers = 1;
-          }
-	                </code></pre>
-				</section>
-			</section>
-
-			<!-- Part 1 : Arithmetic Operators -->
-			<section>
 				<section>
 					<aside class='notes'>
 						Dropping % don't need that with beginners.
@@ -411,102 +239,36 @@
             <strong>maxNumberPassengers = maxNumberPassengers + 3; //we added a backseat!</strong><br>
 					</aside>
 
-					<h3>Code It!</h3>
-                        <pre><code class='java'>
-          maxNumberPassengers = maxNumberPassengers + 3;
-          // we added a backseat!
-	                </code></pre>
+					<h3>An example</h3>
+					<p class="fragment">int myInteger = 5;</p>
+					<p class="fragment">myInteger = myInteger + 1;</p>
+					<p class="fragment">myInteger += 2;</p>
+					<p class="fragment">myInteger++;</p>
+					<p class="fragment">myInteger--;</p>
 				</section>
 				<section>
-					<aside class='notes'>
-            System.out.println("Hello, World!");<br>
-            int numberPassengers;<br>
-            int maxNumberPassengers=2;<br>
-            boolean isFull=false;<br>
-            numberPassengers=1;<br>
-            maxNumberPassengers = maxNumberPassengers + 3; //we added a backseat!<br>
-            <strong>numberPassengers=numberPassengers+1;<br>
-              System.out.println("Number of Passengers: " + numberPassengers);</strong><br>
-					</aside>
-					<h3>Code it!</h3>
+					<h3>Printing Values</h3>
+					<br/>
+					<pre><code class='java'>
+public static void main(String[] args) {
+	int classesTaken = 5;
+	classesTaken++;
+	System.out.println("GDI classes I've taken: " + classesTaken);
+}
+				</code></pre>
 
-					<p class='box--small copy--small'>On your own: </p>
-					<ul class="list--tall copy--small">
-						<li>Increment the <code>numberPassengers</code> value by one</li>
-						<li>Then use the <code>System.out.println</code> method to show the result:	</li>
-					</ul>
-                    <pre><code class='java'>
-          System.out.println("Number of Passengers: " + numberPassengers);
-	                </code></pre>
 				</section>
 				<section>
-					<h3>The Code</h3>
-                    <pre style="height: 100px; overflow: hidden;"><code class='java'>
-          numberPassengers = numberPassengers + 1;
-          System.out.println("Number of Passengers: " + numberPassengers);
-	                </code></pre>
-					<p class="copy--small box--small">Or you can write this in shorthand using the <code>++</code> operator: </p>
-                    <pre style="height: 100px; overflow: hidden;"><code class='java'>
-          numberPassengers++;
-	                </code></pre>
-					<p class="copy--small box--small">Output: </p>
-                    <pre style="height: 100px; overflow: hidden;"><code class='no-highlight'>
-          Hello World
-          Number of Passengers: 2
-                    </code></pre>
-                </section>
-
-
-				<section>
-					<aside class='notes'>
-            int currentSpeed = 0;<br>
-            currentSpeed = currentSpeed + 20;<br>
-            System.out.println("Current Speed: "+currentSpeed);<br>
-            currentSpeed = currentSpeed/2;<br>
-            System.out.println("Current Speed: "+currentSpeed);<br>
-            currentSpeed = currentSpeed *3;<br>
-            System.out.println("Current Speed: "+currentSpeed);<br>
-					</aside>
-					<h4>Code It: <span class="blue">Playing with Arithmetic Operators</span></h4>
-
-					<p class="box--small copy--small">On your own:</p>
-					<ol class="copy--xsmall">
-						<li>Create an integer called <code>currentSpeed</code></li>
-						<li>Initialize it with the value <code>0</code></li>
-						<li>Increase the value by 20mph</li>
-						<li>Print the new current speed</li>
-						<li>Now reduce your speed in half</li>
-						<li>Print the new current speed</li>
-						<li>Increase your speed times three</li>
-						<li>Print the new current speed</li>
-					</ol>
+					<h3>Let's Develop It</h3>
+					<br/>
+					<p>
+						<a href="https://docs.google.com/document/d/1P5lgdb_xZm1uStXfKv0vbTJN9ax0EmQDzDXHd5fnsf4/edit?usp=sharing"
+						target="_blank">Assignment 2
+						</a>
+					</p>
 				</section>
-				<section>
-					<h3>Expected Output: </h3>
-                    <pre><code class='no-highlight'>
-          Hello World
-          Number of Passengers: 2
-          Current Speed: 20
-          Current Speed: 10
-          Current Speed: 30
-                    </code></pre>
-				</section>
-				<section>
-					<h3>The Code</h3>
-                    <pre><code class='java'>
-          int currentSpeed = 0;
-          currentSpeed = currentSpeed + 20;
-          System.out.println("Current Speed: " + currentSpeed);
-          currentSpeed = currentSpeed / 2;
-          System.out.println("Current Speed: " + currentSpeed);
-          currentSpeed = currentSpeed * 3;
-          System.out.println("Current Speed: " + currentSpeed);
-                    </code></pre>
-				</section>
-			</section>
 
 			<!-- Part 1 : Equality & Relationship Operators -->
-			<section>
 				<section>
 					<h4>Equality and Relationship Operators</h4>
 
@@ -540,10 +302,25 @@
 					</table>
 				</section>
 				<section>
-					<h3>Code it!</h3>
+					<h3>Example</h3>
 					<pre style="height: 200px; overflow: hidden;"><code class='java'>
-          isFull = (numberPassengers == maxNumberPassengers);
-          System.out.println("The car is Full: " + isFull);
+double costOfSubway = 2.25;
+double amountOnCard = 3.50;
+boolean canPay = amountOnCard >= costOfSubway;
+System.out.println("You have enough for the subway: " +  );
+					</code></pre>
+					<p>Output:</p>
+					<pre style="height: 200px; overflow: hidden;"><code class='no-highlight'>
+          You have enough for the subway: true
+					</code></pre>
+				</section>
+				<section>
+					<h3>Example</h3>
+					<pre style="height: 200px; overflow: hidden;"><code class='java'>
+int numPassegners = 3;
+int maxNumberPassengers = 4;
+boolean isFull = (numberPassengers == maxNumberPassengers);
+System.out.println("The car is Full: " + isFull);
 					</code></pre>
 					<p>Output:</p>
 					<pre style="height: 200px; overflow: hidden;"><code class='no-highlight'>
@@ -551,52 +328,6 @@
 					</code></pre>
 				</section>
 				<section>
-					<aside class='notes'>
-						Example:<br>
-						isFull = numberPassengers &lt; maxNumberPassengers;<br>
-						System.out.println("We have less than the number of Max Passengers: "+isFull);<br>
-						boolean noMore = numberPassengers >= maxNumberPassengers;<br>
-						System.out.println("I'm full and/or overbooked! "+noMore);<br>
-
-						We have less than the number of Max Passengers: true<br>
-						I'm full and/or overbooked! false<br>
-					</aside>
-					<h3>Code It - Individually</h3>
-					<ol class="list--tall copy--small box--small">
-						<li>In a boolean variable called <code>hasSpace</code>, assign the resulting value of the question "<code>numberPassengers</code>
-							is less than <code>maxNumberPassengers</code>?"
-						</li>
-						<li>Print the result</li>
-						<li>Test if the <code>numberPassengers</code> is greater than or equal to <code>maxNumberPassengers</code>
-							and store it in <code>isFull</code></li>
-						<li>Print the result</li>
-					</ol>
-				</section>
-				<section>
-					<h3>Example Answer</h3>
-					<pre style="height: 250px; overflow: hidden;"><code class='java'>
-	isFull = numberPassengers &lt; maxNumberPassengers;
-	System.out.println("We have less than the number of Max Passengers: "
-	  + isFull);
-	boolean noMore = numberPassengers > maxNumberPassengers;
-	System.out.println("I'm full and/or overbooked! " + noMore);
-					</code></pre>
-					<p>Output:</p>
-					<pre style="height: 250px; overflow: hidden;"><code class='no-highlight'>
-	We have less thatn the number of Max Passengers: true
-	I'm full and/or overbooked! false
-					</code></pre>
-				</section>
-			</section>
-
-            <!-- Part 1 : Conditional Operators -->
-			<section>
-				<section>
-					<aside class='notes'>
-						So evaluate x>0 <br>
-						now evaluate y> 0<br>
-						now evaluate if both of those things were true
-					</aside>
 					<h3>Conditional Operators</h3>
 					<table style="width: 100px; margin: 1em auto">
 						<tr>
@@ -610,44 +341,28 @@
 					</table>
 					<p class="copy--small box--small">We can check if two (x and y) values are true</p>
                     <pre><code class='java'>
-	          positiveNumbers = x > 0 &amp;&amp; y > 0;
+int x = 5;
+int y = -2;
+boolean positiveNumbers = x > 0 &amp;&amp; y > 0;
                     </code></pre>
 				</section>
 				<section>
-					<aside class='notes'>
-						I'm only endangering myself false<br>
-						Mention Short Circuiting? If class is doing well with concepts.
-					</aside>
-					<h3>Code It!</h3>
-                    <pre><code class='java'>
-   boolean dangerToSelfOnly = numberPassengers == 1 &amp;&amp; currentSpeed > 55;
-   System.out.println("I'm only endangering myself " + dangerToSelfOnly);
-                    </code></pre>
+					<h3>Conditional Operators</h3>
+										<pre><code class='java'>
+boolean isOdd = true;
+boolean primeNumber = x == 2 || isOdd;
+										</code></pre>
 				</section>
-			</section>
 
 			<!-- Part 1 : Precedence -->
-			<section>
-				<section>
-					<h3>Precedence</h3>
-
-					<p class="box copy--small">
-						Just like in math class where you multiply and divide before you add and
-						subtract, <strong>all our operators have an order of operations</strong>.
-					</p>
-
-					<p class="copy--xsmall">
-						Check out the
-						<a href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html" target="_blank">Official
-							Documentation</a>.
-					</p>
-				</section>
 				<section>
 					<h3>Precedence</h3>
 
 					<p class="box copy--small">Our previous example: </p>
 					<pre style="height: 35px; overflow: hidden;"><code class='java'>  positiveNumbers = x > 0 &amp;&amp; y > 0;</code></pre>
-					<p class="box--small copy--small">According to the precedence chart, evaluates:</p>
+					<p class="box--small copy--small">According to
+						<a href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html" target="_blank">
+						the precedence chart</a>, evaluates:</p>
 					<table style="width: 400px; margin: 0 auto;" class="copy--small">
 						<tr>
 							<td><code>x > 0, y > 0</code></td>
@@ -663,61 +378,42 @@
 						</tr>
 					</table>
 				</section>
-			</section>
-
-			<!-- Part 1 : Expressions -->
-			<section>
 				<section>
-					<h3>Expressions</h3>
-
-					<p class="copy--small box--small">An expression is a <strong>piece of code that evaluates to a value</strong>.</p>
-
-					<p class="copy--small box--small">Example:</p>
-					<pre style="height: 70px; overflow: hidden"><code>
-		numberPassengers &lt; maxNumberPassengers
-					</code></pre>
-					<p class="copy--small box--small">This expression could be true or false depending on the values of
-						the variables, but it is not a complete statement.</p>
-				</section>
-
-				<!-- Part 1 : Statements -->
-				<section>
-					<aside class='notes'>
-						There is no semi-colon and the expression on the previous page returns a value but nothing
-						happens.
-					</aside>
-					<h3>Statement</h3>
-
-					<p class="copy--small box--small">
-						<strong>A statement is a complete unit of execution.</strong> It's
-						a sentence in the Java Language. An instruction that can be carried out from start to end.
-					</p>
-
-					<p class="copy--small box--small">Let's take a look at one of the statements we've written:</p>
+					<h3>If Statements</h3>
 					<pre><code class='java'>
-    boolean dangerToSelfOnly = numberPassengers == 1 &amp;&amp; currentSpeed > 55;
-					</code></pre>
-				</section>
-			</section>
+int x = 5;
+int y = -2;
+if (x > 0 &amp;&amp; y > 0) {
+	System.out.println("Both are positive.");
+} else {
+	System.out.println("At least one is not positive.");
+}					</code></pre>
 
-			<!-- QUESTIONS / Break -->
-			<section>
-				<section>
-					<h3>Questions?</h3>
-
-					<p class="box--small">Variables &amp; Operators</p>
-					<p class="box--small">Expression &amp; Statements</p>
 				</section>
 				<section>
-					<h3>Break Time!</h3>
+					<h3>If Statements</h3>
+					<pre><code class='java'>
+int x = 5;
+int y = -2;
+if (x > 0 &amp;&amp; y > 0) {
+	System.out.println("Both are positive.");
+} else if (x > 0){
+	System.out.println("X is positive");
+} else if (y > 0) {
+	System.out.println("Y is positive");
+} else {
+	System.out.println("Both are not positive.");
+}</code></pre>
+
 				</section>
 				<section>
-					<h3>Review / Questions?</h3>
-
-					<p class="box--small">Variables &amp; Operators</p>
-					<p class="box--small">Expression &amp; Statements</p>
+					<h3>Let's Develop It</h3>
+					<p><a href="https://docs.google.com/document/d/1P5lgdb_xZm1uStXfKv0vbTJN9ax0EmQDzDXHd5fnsf4/edit?usp=sharing" target="_blank">
+						Assignment 3
+					</a></p>
 				</section>
-			</section>
+
+
 
 			<section>
 				<!-- Event Outro -->
@@ -732,8 +428,8 @@
 						</h3>
 						<p>
 							<small>
-								<a href="http://gdiindy.github.io" target="_blank" title="GDI Indianapolis">GDI Indianapolis</a> &nbsp; | &nbsp;
-								<a href="https://twitter.com/gdiIndy" target="_blank" title="GDI Indy on Twitter">@gdiindy</a> &nbsp; | &nbsp;
+								<a href="http://gdiindy.github.io" target="_blank" title="GDI Boston">GDI Boston</a> &nbsp; | &nbsp;
+								<a href="https://twitter.com/gdiIndy" target="_blank" title="GDI Boston on Twitter">@gdiboston</a> &nbsp; | &nbsp;
 								#IntroToJava
 							</small>
 						</p>
@@ -744,8 +440,8 @@
 
 		<footer>
 			<div class="copyright">
-				<a href="http://gdiindy.github.io" target="_blank" title="GDI Indianapolis">GDI Indianapolis</a> &nbsp; | &nbsp;
-				<a href="https://twitter.com/gdiIndy" target="_blank" title="GDI Indy on Twitter">@gdiindy</a> &nbsp; |
+				<a href="http://gdiindy.github.io" target="_blank" title="GDI Boston">GDI Boston</a> &nbsp; | &nbsp;
+				<a href="https://twitter.com/gdiboston" target="_blank" title="GDI Boston on Twitter">@gdiboston</a> &nbsp; |
 				&nbsp; #IntroToJava &nbsp;
 				<a target="_blank" rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US">
 					<img alt="Creative Commons License" class="img--bare" src="images/cc.png"/>
