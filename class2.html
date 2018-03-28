@@ -341,16 +341,30 @@ System.out.println("It's all lower " + className.toLowerCase());
 					<section>
 						<h3>Initialization</h3>
 						<pre><code class='java'>
-String className;
-System.out.println(className);
+int emptyInt;
+double emptyDouble;
+boolean emptyBoolean;
+System.out.println(emptyInt);
+System.out.println(emptyDouble);
+System.out.println(emptyBoolean);
 						</code></pre>
-
+						<pre>
+0
+0.0
+false
+						</pre>
 					</section>
-					<section>
-						<h3>Let's Develop It</h3>
-							<p class="box--small"><a target="_blank" href="https://docs.google.com/document/d/18fpJ1514mLFz5Bh2mMXPiR7rF8ClgfNW8PPVnkiXrMI/edit?usp=sharing">Assignment 2
-							</a></p>
-						</section>
+						<section>
+							<h3>Initialization</h3>
+							<pre><code class='java'>
+String emptyString;
+System.out.println(emptyString);
+							</code></pre>
+							<pre>
+null
+							</pre>
+					</section>
+
 
             <!-- Arrays -->
 				<section>
@@ -434,25 +448,30 @@ int[] primeNumbers = {1,1,2,3,5,8};
 				</section>
 				<section>
 					<h3>Arrays vs Strings</h3>
-					<table>
-						<tr>
-							<th>Strings</th>
-							<th>Arrays</th>
-						</tr>
-						<tr>
-							<td>Hold One Value</td>
-							<td>Hold Multiple Values</td>
-						</tr>
-						<tr>
-							<td>Access length with .length()</td>
-							<td>Access length with .length</td>
-						</tr>
-						<tr>
-							<td>Hold text</td>
-							<td>Hold a series of any type</td>
-						</tr>
-					</table>
+
+					<img width="70%" src="images/array-table.png"/>
 				</section>
+
+				<section>
+					<h3>Objects vs Primatives</h3>
+					<img width="70%" src="images/objectsvprimatives.png"/>
+				</section>
+
+				<section>
+					<h3>Revisiting main</h3>
+					<pre><code class='java'>
+public static void main(String[] args) {
+
+}
+				</code></pre>
+
+				</section>
+
+				<section>
+					<h3>Let's Develop It</h3>
+						<p class="box--small"><a target="_blank" href="https://docs.google.com/document/d/18fpJ1514mLFz5Bh2mMXPiR7rF8ClgfNW8PPVnkiXrMI/edit?usp=sharing">Assignment 2
+						</a></p>
+					</section>
 
 			<!-- TODO: Constructors are confusing at this point in class. Consider removing this section, since it's addressed in CLASS 3 objects. -->
 			<!-- Constructors -->
@@ -488,21 +507,12 @@ int[] primeNumbers = {1,1,2,3,5,8};
 				</p>
 			</section> -->
 
-			<section>
 				<section>
 					<h3>Questions?</h3>
 
-					<p class="box--small">Object Oriented Programming</p>
+					<p class="box--small">Next week: Object Oriented Programming</p>
 				</section>
 
-				<section>
-					<h3>Review / Questions?</h3>
-
-					<p class="box--small">Variables &amp; Operators</p>
-					<p class="box--small">Flow Control Constructs</p>
-					<p class="box--small">Object Oriented Programming</p>
-				</section>
-			</section>
 			<section>
 				<!-- Event Outro -->
 				<section>

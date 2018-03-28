@@ -1,0 +1,90 @@
+= Intro to Java Class Notes
+:source-highlighter: highlightjs
+
+== Loops
+With loops, we can write code once and have it executed multiple times in a row.
+
+== For loops
+For loops allow you to directly increment or decrement the loop condition.
+A for loop has three components:
+
+* an initial variable - defines the variable that will be used for the condition
+* a termination condition defines when the loop will stop
+* the increment - changes the variable with each iteration of the loop
+
+[source,java]
+for (int i = 0; i < 5; i++) {
+  System.out.println(Index + ": " + i);
+}
+
+=== While loops
+
+While Loops allow for a more generic loop condition.
+
+[source, java]
+boolean done = false;
+int count = 1;
+while (!done) {
+  System.out.println("Loop " + count);
+  if (count > 25) {
+    done = true;
+  }
+}
+
+== Strings
+
+A String is an object that stores text. Strings are represented by quotation marks.
+
+[source,java]
+String myString = "This is a string";
+
+Get the length of a String
+
+[source,java]
+myString.length()
+
+Check whether a String contains another String
+
+[source,java]
+myString.contains("a");
+
+Change the case of a String
+
+[source,java]
+myString.toLowercase();
+myString.toUppercase();
+
+A String is null before it is initialized.
+
+== Arrays
+
+Arrays are containers for values. Arrays hold a single type of value and have a
+fixed length that must be defined when you create the array. Arrays are 0-indexed,
+the first index is 0, the second index is 1, etc.
+
+There are two ways to create an array. In the first you define the type and the length
+and then fill in each value.
+
+[source,java]
+String[] array = new String[3];
+array[0] = "A";
+array[1] = "B";
+array[2] = "C";
+
+The second way is directly, you initialize all the values at once and Java
+infers the type and length from the values.
+
+[source,java]
+String[] directArray = {"A", "B", "C"};
+
+Getting the length of an array
+
+[source,java]
+directArray.length
+
+This is especially helpful in for loops
+
+[source,java]
+for (int i=0; i < directArray.length; i++) {
+  System.out.println(directArray[i]);
+}
