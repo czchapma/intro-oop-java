@@ -1,0 +1,99 @@
+= Intro to Java Class 3 Notes
+:source-highlighter: highlightjs
+
+== Definitions
+* A class is a blueprint for creating an object with certain behaviors and properties.
+* An object is a specific instance of a class that has behaviors and properties specified in the blueprint.
+* Member variables - The state of a class (ex: speed, isEngineRunning, color).  Specific to a particular object / instance of the class.
+* Static variables - Specific to the class as a whole, shared between all objects.
+* Methods - Behaviors for an object
+* Constructor - a special method that initializes the object
+* Access level - Typically public or private. Sets whether a method or variables can be accessed outside the class (public) or not (private).
+* Return type - the result of a method returned to the caller of the method. (Ex: boolean, int, String, void)
+* Void - A return type that means nothing is returned
+* Subclass - A child of a class, inherits the methods and member variables of the parent, but can override behavior and define new behavior. (Ex: Car is a subclass of MotorVehicle).
+
+== Defining a classes with member variables
+[source,java]
+public class MotorVehicle {
+  //These are the member variables
+  double speed;
+  boolean isEngineRunning;
+}
+
+== Creating a Constructor
+
+A constructor is a special method that is invoked
+when you create a new instance of your object.
+
+[source,java]
+public class MotorVehicle {
+
+  //This is a constructor with no arguments
+  public MotorVehicle() {
+
+  }
+}
+
+[source,java]
+public class MotorVehicle {
+  double maxSpeed;
+  //This is a constructor with one argument
+  public MotorVehicle(double maxSpeed) {
+    this.maxSpeed = maxSpeed;
+  }
+}
+
+== Creating Methods
+
+[Access Level] [Return Type] methodName(arguments)
+
+
+[source,java]
+public boolean isInClass(String student) {
+
+}
+
+[source,java]
+public int getNumStudentsInClass() {
+
+}
+
+[source,java]
+public static void main(String[] args) {
+
+}
+
+== Access modifiers
+* Public members can be accessed by all other classes.
+
+* Private members can only be accessed within its own class.
+
+== Creating objects
+
+[source,java]
+MyObject obj = new MyObject();
+ComplexClass myComplexClass = new ComplexClass("This constructor expects a string.");
+
+== Static vs instance
+When a method is declared static,
+it is shared by all instances of the class.
+
+In contrast, the type of methods we've been using
+have been unique to each instance.
+
+== Inheritance
+A class can derive from another class
+
+A class that is derived from another class is called a subclass
+
+Subclasses inherit fields and methods from their parent class
+
+[source,java]
+public class Car extends MotorVehicle {
+
+}
+
+public class Bus extends MotorVehicle {
+
+}

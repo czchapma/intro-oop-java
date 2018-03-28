@@ -118,8 +118,8 @@
 						current number of passengers -- accessor method<br>
 					</aside>
 					<h3>Featured Object</h3>
-
-					<p class="fragment">
+					<br/>
+					<p>
 						What are a MotorVehicle's <span class="blue"><strong>states</strong></span> and <span class="green"><strong>behaviors</strong></span>?
 					</p>
 				</section>
@@ -167,12 +167,12 @@
 					</code></pre>
 				</section>
 
-			<!-- Data Members -->
+			<!-- Member Variables -->
 				<section>
-					<h3>Data Members</h3>
+					<h3>Member Variables</h3>
 
 					<p class="box copy--small">
-						An Object has one or more <span class="blue">data members</span> that <span class="green">describe its state</span>.
+						An Object has one or more <span class="blue">member variables</span> that <span class="green">describe its state</span>.
 					</p>
 				</section>
 				<section>
@@ -184,7 +184,7 @@
 							int numCurrentPassengers;<br>
 						}<br>
 					</aside>
-					<h3>Defining Data Members</h3>
+					<h3>Defining Member Variables</h3>
 					<pre><code class='java'>
 		public class MotorVehicle {
 		   int currentSpeed;
@@ -231,12 +231,12 @@ public class MotorVehicle {
 					<p class="fragment"><span class="blue">public</span> <span class="green">void</span> <span class="red">setClassHasStarted</span>(boolean classHasStarted)</p>
 				</section>
 
-				<!-- Data Members -->
+				<!-- Member Variables -->
 					<section>
 						<aside class="notes">
 							We've already seen this with the public modifiers on our class declaration and method declaration
 						</aside>
-						<h3>Data Members -<br/>Access Modifiers</h3>
+						<h3>Member Variables -<br/>Access Modifiers</h3>
 
 						<p class="box copy--small"><span class="blue">Public</span> members can be <span class="green">accessed by all other classes</span>.</p>
 						<p class="box copy--small"><span class="blue">Private</span> members can <span class="green">only be accessed within its own class</span>.</p>
@@ -261,7 +261,7 @@ public class MotorVehicle {
 					<pre class="small"><code class='java'>
 		nameOfInstance.methodName();
 					</code></pre>
-					<p class="copy--small box--small">Similarly, you can access data members using this syntax: </p>
+					<p class="copy--small box--small">Similarly, you can access member variables using this syntax: </p>
 					<pre class="small"><code class='java'>
 		nameOfInstance.dataMember;
 					</code></pre>
@@ -269,17 +269,6 @@ public class MotorVehicle {
 
 
 
-
-				<section>
-					<h3>Data Encapsulations</h3>
-					<ol class="list--tall box--small copy--small">
-						<li>Control to make fields read-only and write-only.</li>
-						<li>Classes can have absolute control over what is stored in the field.</li>
-						<li>Provides a layer of abstraction. Users of the class (other code or objects) do not need to
-							know the details of the data storage.
-						</li>
-					</ol>
-				</section>
 
 			<!-- TODO: STOPPED FORMATTING HERE. -->
 			<!-- Static -->
@@ -291,6 +280,11 @@ public class MotorVehicle {
 
 					<p class="copy--small box">In contrast, the type of methods we've been using<br/>
 						have been <strong>unique</strong> to each instance.</p>
+				</section>
+
+				<section>
+					<h3>Let's Develop It</h3>
+					<a href="https://docs.google.com/document/d/1DbZEE5Ac6iAmnDooS0wDydal8I85VO38b3W_ZVLFB6Y/edit?usp=sharing" target="_blank">Assignment 1</a>
 				</section>
 
 			<!-- Subclass -->
@@ -313,19 +307,17 @@ public class MotorVehicle {
 					</ul>
 				</section>
 				<section>
-					<h3>MotorVehicle -> Car</h3>
-
-					<p class="copy--small box--small">Let's create a car</p>
-
-					<p class="copy--small box--small">File > New > Class</p>
-
-					<p class="copy--small box--small">Name: Car</p>
+					<h3>Subclassing</h3>
 
 					<p class="copy--small box--small">Add the extends keyword and the name of the parent class
 						(MotorVehicle)</p>
           <pre><code class='java'>
 	          public class Car extends MotorVehicle {
 	          ...
+	          }
+
+	          public class Bus extends MotorVehicle {
+	            ...
 	          }
           </code></pre>
 				</section>
@@ -341,6 +333,11 @@ public class MotorVehicle {
 					<p class="copy--small box--small">Inherited fields can be used directly</p>
 
 					<p class="copy--small box--small">A subclass can't inherit private members</p>
+				</section>
+
+				<section>
+					<h3>Let's Develop It</h3>
+					<a href="https://docs.google.com/document/d/1DbZEE5Ac6iAmnDooS0wDydal8I85VO38b3W_ZVLFB6Y/edit?usp=sharing" target="_blank">Assignment 2</a>
 				</section>
 
 
